@@ -4698,3 +4698,45 @@
 	}
 
 }
+#Brazil islands - No Basis for this at all
+3482 = {
+	farmers = {
+		culture = brazilian
+		religion = catholic
+		size = 12700
+	}
+
+	farmers = {
+		culture = afro_brazilian
+		religion = catholic
+		size = 1000
+	}
+
+	soldiers = {
+		culture = brazilian
+		religion = catholic
+		size = 1000
+	}
+
+	slaves = {
+		culture = afro_brazilian
+		religion = catholic
+		size = 2000
+	}
+	bureaucrats = {
+		culture = brazilian
+		religion = catholic
+		size = 50
+	}
+	aristocrats = {
+		culture = brazilian
+		religion = catholic
+		size = 200
+	}
+	clergymen = {
+		culture = afro_brazilian
+		religion = catholic
+		size = 10
+	}
+
+}

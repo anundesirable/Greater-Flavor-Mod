@@ -2988,6 +2988,88 @@
 	}
 	########
 }
+###### Mosbach XXX/XXX
+3481 = {
+	aristocrats = {
+		culture = south_german
+		religion = catholic
+		size = 200 
+	}
+
+	clergymen = {
+		culture = south_german
+		religion = catholic
+		size = 150           
+	}
+
+	artisans = {
+		culture = south_german
+		religion = catholic
+		size = 750
+	}
+
+	soldiers = {
+		culture = south_german
+		religion = catholic
+		size = 150           
+	}
+
+	farmers = {
+		culture = south_german
+		religion = catholic
+		size = 13750           
+	}
+
+	clergymen = {
+		culture = south_german
+		religion = protestant
+		size = 400 
+	}
+
+	artisans = {
+		culture = south_german
+		religion = protestant
+		size = 2500
+	}
+
+	soldiers = {
+		culture = south_german
+		religion = protestant
+		size = 500 
+	}
+
+	farmers = {
+		culture = south_german
+		religion = protestant
+		size = 46600 
+	}
+
+	######Jews
+	soldiers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	clergymen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	artisans = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	########
+}
 #under the rule of Hesse-Darmstadt 1836  
 #Mainz (242200/60550 POPS)
 570 = {

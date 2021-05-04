@@ -69,8 +69,39 @@
 		size = 68090
 	}
 }
+#Highlands (XXX/XXX POPS)
+3478 = {
+	aristocrats = {
+		culture = british
+		religion = anglican
+		size = 160
+	}
 
-#Orkney & Shetland - former Tamanrasset
+	clergymen = {
+		culture = british
+		religion = anglican
+		size = 250
+	}
+
+	soldiers = {
+		culture = british
+		religion = anglican
+		size = 2000
+	}
+
+	artisans = {
+		culture = british
+		religion = anglican
+		size = 4000
+	}
+
+	farmers = {
+		culture = scottish
+		religion = reformed
+		size = 68090
+	}
+}
+#Shetland - former Orkeny & Shetland former Tamanrasset
 1724 = {
 
 	aristocrats = {
@@ -104,7 +135,73 @@
 	}
 
 }
+#Orkney - former Orkeny & Shetland former Tamanrasset
+3477 = {
 
+	aristocrats = {
+		culture = scottish
+		religion = reformed
+		size = 40
+	}
+
+	clergymen = {
+		culture = scottish
+		religion = reformed
+		size = 225
+	}
+
+	soldiers = {
+		culture = scottish
+		religion = reformed
+		size = 375
+	}
+
+	artisans = {
+		culture = scottish
+		religion = reformed
+		size = 1000
+	}
+
+	farmers = {
+		culture = scottish
+		religion = reformed
+		size = 5860
+	}
+
+}
+#Hebrides - former Orkeny & Shetland former Tamanrasset
+3479 = {
+	aristocrats = {
+		culture = scottish
+		religion = reformed
+		size = 40
+	}
+
+	clergymen = {
+		culture = scottish
+		religion = reformed
+		size = 225
+	}
+
+	soldiers = {
+		culture = scottish
+		religion = reformed
+		size = 375
+	}
+
+	artisans = {
+		culture = scottish
+		religion = reformed
+		size = 1000
+	}
+
+	farmers = {
+		culture = scottish
+		religion = reformed
+		size = 5860
+	}
+
+}
 #Dundee (364000/91000 POPS)
 268 = {
 	aristocrats = {
@@ -2145,6 +2242,56 @@
 #Normandie Region
 #Channel Islands (72000/18000 POPS)
 419 = {
+	aristocrats = {
+		culture = british
+		religion = anglican
+		size = 100
+	}
+
+	bureaucrats = {
+		culture = british
+		religion = anglican
+		size = 50
+	}
+
+	clergymen = {
+		culture = british
+		religion = anglican
+		size = 125
+	}
+
+	soldiers = {
+		culture = british
+		religion = anglican
+		size = 250
+	}
+
+	farmers = {
+		culture = british
+		religion = anglican
+		size = 2075
+	}
+	
+	artisans = {
+		culture = british
+		religion = anglican
+		size = 400
+	}
+	
+	artisans = {
+		culture = french
+		religion = catholic
+		size = 3000
+	}
+	
+	farmers = {
+		culture = french
+		religion = catholic
+		size = 12000
+	}
+}
+#Isles of Scilly (XXX/XXX POPS)
+3480 = {
 	aristocrats = {
 		culture = british
 		religion = anglican

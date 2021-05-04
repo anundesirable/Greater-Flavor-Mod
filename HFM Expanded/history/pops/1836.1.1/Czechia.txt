@@ -140,6 +140,146 @@
 		size = 1250 
 	}
 }
+#Prague (Praha) (XXX/XXX POPS)
+3483 = {
+	bureaucrats = {
+		culture = czech
+		religion = catholic
+		size = 450 
+	}
+
+	officers = {
+		culture = czech
+		religion = catholic
+		size = 250 
+	}
+
+	clergymen = {
+		culture = czech
+		religion = catholic
+		size = 3025
+	}
+
+	artisans = {
+		culture = czech
+		religion = catholic
+		size = 13100
+	}
+	
+	artisans = {
+		culture = czech
+		religion = catholic
+		size = 8000
+	}
+
+	soldiers = {
+		culture = czech
+		religion = catholic
+		size = 3000
+	}
+
+	soldiers = {
+		culture = czech
+		religion = catholic
+		size = 750
+	}
+
+	farmers = {
+		culture = czech
+		religion = catholic
+		size = 110000
+	}
+	
+	serfs = {
+		culture = gypsy
+		religion = catholic
+		size = 11000
+	}
+	
+	serfs = {
+		culture = czech
+		religion = catholic
+		size = 129000
+	}
+
+	aristocrats = {
+		culture = south_german
+		religion = catholic
+		size = 2500 
+	}
+
+	bureaucrats = {
+		culture = south_german
+		religion = catholic
+		size = 1550 
+	}
+
+	officers = {
+		culture = south_german
+		religion = catholic
+		size = 800 
+	}
+
+	clergymen = {
+		culture = south_german
+		religion = catholic
+		size = 275
+	}
+
+	artisans = {
+		culture = south_german
+		religion = catholic
+		size = 9000
+	}
+
+	soldiers = {
+		culture = south_german
+		religion = catholic
+		size = 300
+	}
+
+	farmers = {
+		culture = south_german
+		religion = catholic
+		size = 5775 
+	}
+	
+	aristocrats = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	
+	officers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	clergymen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	artisans = {
+		culture = ashkenazi
+		religion = jewish
+		size = 3000
+	}
+
+	soldiers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 1250 
+	}
+}
 #Rokycany (400000/100000 POPS)
 3333 = {
 	clergymen = {
