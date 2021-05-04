@@ -61,6 +61,14 @@ economic_malaise = {
 	
 }
 
+transisthmian_trade = {
+	local_RGO_output = 1.5
+	local_RGO_throughput = 1.5
+	immigrant_attract = 0.8
+	population_growth = 0.3
+	farm_rgo_eff = 0.5
+}
+
 government_propaganda = {
     literacy_con_impact = -0.20
     issue_change_speed = -0.20
@@ -188,6 +196,12 @@ colony_to_be_annexed = {
     icon = 5
 }
 
+liman_sanders_mission = {
+	land_organisation = 0.1
+	naval_organisation = 0.05
+	org_regain = 0.05
+}
+
 regency_government = {
     global_pop_consciousness_modifier = 0.1
     global_pop_militancy_modifier = 0.05
@@ -219,6 +233,18 @@ non_interventionism_trade_policy = {
     tariff_efficiency_modifier = 0.1
     tax_efficiency = 0.05
     icon = 9
+}
+
+whdestroyed = {
+	prestige = -0.1
+	immigrant_attract = -0.5
+	life_rating = -0.1
+	local_RGO_output = -0.5
+	local_artisan_output = -0.5
+	local_factory_output = -0.5
+	local_ruling_party_support = -0.5
+	population_growth = -0.1
+	immigrant_push = 0.5
 }
 
 french_liberal_school = {
@@ -1051,6 +1077,11 @@ pancasila = {
     assimilation_rate = 0.1
     core_pop_militancy_modifier = -0.1
     ruling_party_support = 0.1
+    icon = 5
+}
+
+munich_coin_treaty_enacted = {
+    tax_efficiency = 0.01
     icon = 5
 }
 
