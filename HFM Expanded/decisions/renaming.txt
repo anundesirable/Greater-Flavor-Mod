@@ -906,6 +906,9 @@ political_decisions = {
 			owns = 625 #Prague
 			owns = 626 #Hradec Kralove
 			owns = 631 #Brno
+			owns = 3483
+			owns = 3333
+			owns = 3334
 			NOT = { has_global_flag = bohemia_rename_czh }
 		}
 		
@@ -917,9 +920,10 @@ political_decisions = {
 			set_global_flag = bohemia_rename_czh
 			prestige = 2
 			625 = {
-				change_province_name = "Praha"
+				change_province_name = "Kladno"
 				state_scope = { change_region_name = "Cechy-Morava" }
 			}
+			3483 = { change_province_name = "Praha" }
 			626 = { change_province_name = "Hradec Králové" }
 			631 = { change_province_name = "Brno" }
 			3333 = { change_province_name = "Pribram" }
@@ -936,6 +940,9 @@ political_decisions = {
 			owns = 625 #Prague
 			owns = 626 #Hradec Kralove
 			owns = 631 #Brno
+			owns = 3483
+			owns = 3333
+			owns = 3334
 			has_global_flag = bohemia_rename_czh
 		}
 		
@@ -946,9 +953,10 @@ political_decisions = {
 		effect = {
 			clr_global_flag = bohemia_rename_czh
 			625 = {
-				change_province_name = "Prag"
+				change_province_name = "Kladen"
 				state_scope = { change_region_name = "Böhmen-Mähren" }
 			}
+			3483 = { change_province_name = "Prag" }
 			626 = { change_province_name = "Königgrätz" }
 			631 = { change_province_name = "Brünn" }
 			3333 = { change_province_name = "Freiberg" }

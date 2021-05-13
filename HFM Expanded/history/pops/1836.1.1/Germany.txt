@@ -2935,7 +2935,7 @@
 	farmers = {
 		culture = south_german
 		religion = catholic
-		size = 13750           
+		size = 10750           
 	}
 
 	clergymen = {
@@ -2959,7 +2959,7 @@
 	farmers = {
 		culture = south_german
 		religion = protestant
-		size = 46600 
+		size = 36600 
 	}
 
 	######Jews
@@ -3017,7 +3017,7 @@
 	farmers = {
 		culture = south_german
 		religion = catholic
-		size = 13750           
+		size = 3000           
 	}
 
 	clergymen = {
@@ -3041,20 +3041,14 @@
 	farmers = {
 		culture = south_german
 		religion = protestant
-		size = 46600 
+		size = 10000 
 	}
 
 	######Jews
-	soldiers = {
-		culture = ashkenazi
-		religion = jewish
-		size = 100
-	}
-
 	clergymen = {
 		culture = ashkenazi
 		religion = jewish
-		size = 100
+		size = 15
 	}
 
 	artisans = {
@@ -3066,7 +3060,7 @@
 	farmers = {
 		culture = ashkenazi
 		religion = jewish
-		size = 100
+		size = 120
 	}
 	########
 }
