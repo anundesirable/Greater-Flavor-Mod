@@ -66,7 +66,7 @@
 	farmers = {
 		culture = scottish
 		religion = reformed
-		size = 68090
+		size = 48090
 	}
 }
 #Highlands (XXX/XXX POPS)
@@ -98,7 +98,7 @@
 	farmers = {
 		culture = scottish
 		religion = reformed
-		size = 68090
+		size = 28090
 	}
 }
 #Shetland - former Orkeny & Shetland former Tamanrasset
@@ -165,7 +165,7 @@
 	farmers = {
 		culture = scottish
 		religion = reformed
-		size = 5860
+		size = 7860
 	}
 
 }
@@ -198,7 +198,7 @@
 	farmers = {
 		culture = scottish
 		religion = reformed
-		size = 5860
+		size = 12860
 	}
 
 }
@@ -2295,48 +2295,36 @@
 	aristocrats = {
 		culture = british
 		religion = anglican
-		size = 100
+		size = 10
 	}
 
 	bureaucrats = {
 		culture = british
 		religion = anglican
-		size = 50
+		size = 10
 	}
 
 	clergymen = {
 		culture = british
 		religion = anglican
-		size = 125
+		size = 10
 	}
 
 	soldiers = {
 		culture = british
 		religion = anglican
-		size = 250
+		size = 20
 	}
 
 	farmers = {
 		culture = british
 		religion = anglican
-		size = 2075
+		size = 220
 	}
 	
 	artisans = {
 		culture = british
 		religion = anglican
-		size = 400
-	}
-	
-	artisans = {
-		culture = french
-		religion = catholic
-		size = 3000
-	}
-	
-	farmers = {
-		culture = french
-		religion = catholic
-		size = 12000
+		size = 30
 	}
 }

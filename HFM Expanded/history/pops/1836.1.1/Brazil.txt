@@ -4703,40 +4703,39 @@
 	farmers = {
 		culture = brazilian
 		religion = catholic
-		size = 12700
+		size = 200
 	}
 
 	farmers = {
 		culture = afro_brazilian
 		religion = catholic
-		size = 1000
+		size = 200
+	}
+	
+	farmers = {
+		culture = gypsy
+		religion = catholic
+		size = 10
 	}
 
 	soldiers = {
 		culture = brazilian
 		religion = catholic
-		size = 1000
-	}
-
-	slaves = {
-		culture = afro_brazilian
-		religion = catholic
-		size = 2000
+		size = 50
 	}
 	bureaucrats = {
 		culture = brazilian
 		religion = catholic
-		size = 50
+		size = 10
 	}
 	aristocrats = {
 		culture = brazilian
 		religion = catholic
-		size = 200
+		size = 5
 	}
 	clergymen = {
-		culture = afro_brazilian
+		culture = brazilian
 		religion = catholic
 		size = 10
 	}
-
 }

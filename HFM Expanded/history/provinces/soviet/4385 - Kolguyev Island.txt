@@ -1,6 +1,7 @@
-owner = RUS
-controller = RUS
-add_core = RUS
+owner = RPL
+controller = RPL
+add_core = RPL
 trade_goods = fish
-terrain = montane_tundra
 life_rating = 10
+terrain = montane_tundra
+colonial = 2

@@ -1553,54 +1553,18 @@
 }
 #Novaya Zemlya (XXX/XXX POPS)
 3484 = {
-	clergymen = {
-		culture = russian
-		religion = orthodox
-		size = 5
-	}
-
-	farmers = {
-		culture = russian
-		religion = orthodox
-		size = 95
-	}
-
-	clergymen = {
-		culture = ugrian
-		religion = tengri
-		size = 10
-	}
-
 	farmers = {
 		culture = ugrian
-		religion = tengri
-		size = 590
+		religion = animist
+		size = 100
 	}
 }
 #Kolguyev Island (XXX/XXX POPS)
 3485 = {
-	clergymen = {
-		culture = russian
-		religion = orthodox
-		size = 5
-	}
-
 	farmers = {
-		culture = russian
-		religion = orthodox
-		size = 95
-	}
-
-	clergymen = {
-		culture = ugrian
-		religion = tengri
-		size = 10
-	}
-
-	farmers = {
-		culture = ugrian
-		religion = tengri
-		size = 590
+		culture = inuit
+		religion = animist
+		size = 500
 	}
 }
 #Inta (3400/850 POPS)

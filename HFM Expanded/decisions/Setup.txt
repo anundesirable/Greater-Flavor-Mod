@@ -1122,6 +1122,11 @@ political_decisions = {
 			USA = {
 				add_country_modifier = { name = you_are_going_to_the_usa duration = -1 }
 			}
+			625 = { change_province_name = "Kladen" }
+			3483 = { change_province_name = "Prag" }
+			3485 = { change_province_name = "Baffin Island" }
+			3484 = { change_province_name = "Kolguyev Island and Novaya Zemlya" }
+			1724 = { change_province_name = "Shetland Islands" }
 			864 = { change_province_name = "Karesi" }
 			1717 = { change_province_name = "Bouira" }
 			1721 = { change_province_name = "El Tarf" }
