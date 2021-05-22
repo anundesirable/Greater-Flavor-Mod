@@ -1,0 +1,14 @@
+owner = KAL
+controller = KAL
+add_core = KAL
+add_core = PER	
+add_core = BLC
+trade_goods = grain
+life_rating = 35
+
+1861.1.1 = {
+	controller = PER
+	owner = PER
+        add_core = PER
+        add_core = BLC
+}

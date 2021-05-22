@@ -163,6 +163,18 @@ QAS		="countries/Qashqai.txt"
 KOH		="countries/Kingdom of Haiti.txt"
 PLG		="countries/Nouvelle Pologne.txt"
 
+###Iran Gaming
+
+KND = "countries/Kandahar.txt"
+#MYN = "countries/Maymana.txt"
+KHT = "countries/Kuhistan.txt"
+MKU = "countries/Maku.txt"
+SHD = "countries/Shadlu.txt"
+BSR = "countries/Bushehr.txt"
+KGN	= "countries/Kagan.txt"
+KHN	= "countries/Kharan.txt"
+DZD	= "countries/Dozdab.txt"
+
 ###Colonial Spain Countries
 CGC 	= "countries/Colonial Chile.txt"
 VNG		= "countries/Colonial Colombia.txt"

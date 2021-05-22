@@ -1,0 +1,7 @@
+owner = KND
+controller = KND
+add_core = KHT
+add_core = KAL	
+add_core = BLC
+trade_goods = grain
+life_rating = 35

@@ -1,0 +1,14 @@
+owner = MAK
+controller = MAK
+add_core = MAK
+add_core = BLC
+add_core = PER
+trade_goods = grain
+life_rating = 35
+
+1861.1.1 = {
+	controller = PER
+	owner = PER
+        add_core = PER
+        add_core = BLC
+}

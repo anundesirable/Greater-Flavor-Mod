@@ -1234,19 +1234,22 @@ country_event = {
 		name = "EVT90088OPTA"
 		prestige = 10
 		end_war = EGY
-		random_country = {
+		random_owned = {
 			limit = {
-				tag = HDJ
-				ai = yes
-				OR = {
-					part_of_sphere = no
-					in_sphere = TUR
+				HDJ = {
+					exists = yes
+					ai = yes
+					OR = {
+						part_of_sphere = no
+						in_sphere = TUR
+					}
 				}
 			}
-			any_owned = { add_core = TUR } 
-			all_core = { add_core = TUR }
-			annex_to = THIS
-			government = absolute_monarchy
+			owner = { 
+				end_war = HDJ
+				create_vassal = HDJ 
+				HDJ = { government = colonial_company }
+			}
 		}
 		relation = { who = EGY value = 100 }
 		relation = { who = RUS value = -200 }
