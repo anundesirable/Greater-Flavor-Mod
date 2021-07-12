@@ -603,17 +603,25 @@ country_event = {
     option = {
         name = "EVT100019OPTA"
         prestige_factor = -0.25
-        any_owned = {
+        any_province = {
             limit = {
+                is_core = THIS
                 OR = {
-                    province_id = 686
-                    province_id = 1204
+                    location = {
+                        province_id = 686
+                    }
+                    location = {
+                        province_id = 1204
+                    }
+                    location = {
+                        province_id = 2519
+                    }
                 }
             }
             secede_province = FROM
+            remove_core = THIS
         }
-		686 = { remove_core = THIS }
-		1204 = { remove_core = THIS }
+        random_owned = { limit = { province_id = 686 } secede_province = FROM remove_core = THIS }
         1116 = { remove_core = TKM }
         1150 = { remove_core = TKM }
         1147 = { remove_core = TKM }

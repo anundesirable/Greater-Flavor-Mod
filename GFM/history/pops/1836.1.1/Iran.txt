@@ -1301,13 +1301,7 @@
     soldiers = {
         culture = persian
         religion = shiite
-        size = 3100
-    }
-	
-	farmers = {
-        culture = persian
-        religion = shiite
-        size = 8600
+        size = 21100
     }
 
     farmers = {
@@ -1363,7 +1357,7 @@
     soldiers = {
         culture = persian
         religion = shiite
-        size = 1125
+        size = 125
     }
 
     farmers = {
@@ -1395,7 +1389,7 @@
     soldiers = {
         culture = persian
         religion = shiite
-        size = 5100
+        size = 1100
     }
 
     farmers = {
@@ -1438,7 +1432,7 @@
     soldiers = {
         culture = persian
         religion = shiite
-        size = 6100
+        size = 1100
     }
 
     farmers = {

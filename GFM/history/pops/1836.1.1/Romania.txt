@@ -3139,7 +3139,7 @@
     farmers = {
         culture = turkish
         religion = sunni
-        size = 9500
+        size = 13500
     }
 
     farmers = {
@@ -3151,93 +3151,67 @@
 #Tulcea (40000/10000 POPS)
 675 = {
 
-	soldiers = {
+    soldiers = {
         culture = romanian
         religion = orthodox
-        size = 360
+        size = 100
     }
 
     clergymen = {
         culture = romanian
         religion = orthodox
-        size = 60
+        size = 100
     }
 
     artisans = {
         culture = romanian
         religion = orthodox
-        size = 210
+        size = 500
     }
 
     farmers = {
         culture = romanian
         religion = orthodox
-        size = 2690
+        size = 1600
     }
-	
-	farmers = {
-		culture = turkish
-		religion = sunni
-		size = 2670
-	}
 
     slaves = {
         culture = tatar
         religion = orthodox
-        size = 6000
+        size = 11000
     }
 
     aristocrats = {
         culture = turkish
         religion = sunni
-        size = 100
+        size = 150
     }
-	
-	farmers = {
-		culture = bulgarian
-		religion = orthodox
-		size = 4000
-	}
-}
-3372 = {
-	
-	aristocrats = {
+
+    clergymen = {
         culture = turkish
         religion = sunni
         size = 100
     }
-	
-	soldiers = {
-        culture = romanian
-        religion = orthodox
-        size = 840
-    }
-
-    clergymen = {
-        culture = romanian
-        religion = orthodox
-        size = 140
-    }
 
     artisans = {
-        culture = romanian
-        religion = orthodox
-        size = 490
+        culture = turkish
+        religion = sunni
+        size = 200
+    }
+
+    soldiers = {
+        culture = turkish
+        religion = sunni
+        size = 1100
     }
 
     farmers = {
-        culture = romanian
-        religion = orthodox
-        size = 6270
+        culture = turkish
+        religion = sunni
+        size = 9600
     }
-	
-	farmers = {
-		culture = turkish
-		religion = sunni
-		size = 1570
-	}
-	
-	soldiers = {
+
+    soldiers = {
         culture = ukrainian
         religion = orthodox
         size = 100
@@ -3260,16 +3234,90 @@
         religion = orthodox
         size = 2825
     }
-	
-	farmers = {
-		culture = bulgarian
-		religion = orthodox
-		size = 4000
-	}
-	
-	slaves = {
+}
+3372 = {
+
+    soldiers = {
+        culture = romanian
+        religion = orthodox
+        size = 100
+    }
+
+    clergymen = {
+        culture = romanian
+        religion = orthodox
+        size = 100
+    }
+
+    artisans = {
+        culture = romanian
+        religion = orthodox
+        size = 500
+    }
+
+    farmers = {
+        culture = romanian
+        religion = orthodox
+        size = 1600
+    }
+
+    slaves = {
         culture = tatar
         religion = orthodox
-        size = 3000
+        size = 11000
+    }
+
+    aristocrats = {
+        culture = turkish
+        religion = sunni
+        size = 150
+    }
+
+    clergymen = {
+        culture = turkish
+        religion = sunni
+        size = 100
+    }
+
+    artisans = {
+        culture = turkish
+        religion = sunni
+        size = 200
+    }
+
+    soldiers = {
+        culture = turkish
+        religion = sunni
+        size = 1100
+    }
+
+    farmers = {
+        culture = turkish
+        religion = sunni
+        size = 9600
+    }
+
+    soldiers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 100
+    }
+
+    clergymen = {
+        culture = ukrainian
+        religion = orthodox
+        size = 100
+    }
+
+    artisans = {
+        culture = ukrainian
+        religion = orthodox
+        size = 150
+    }
+
+    farmers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 2825
     }
 }

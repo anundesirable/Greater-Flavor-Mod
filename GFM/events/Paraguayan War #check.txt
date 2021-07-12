@@ -760,7 +760,7 @@ country_event = {
                 factor = 4
             }
             scaled_militancy = {
-                ideology = radical
+                ideology = anarcho_liberal
                 factor = 6
             }
         }

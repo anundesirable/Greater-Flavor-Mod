@@ -316,6 +316,12 @@ country_event = {
                 duration = 1095
             }
         }
+		2172 = {
+			add_province_modifier = {
+				name =	mexico_city_buff
+				duration = -1
+			}
+		}
     }
 }
 
@@ -453,9 +459,11 @@ country_event = {
 
     option = {
         name = "EVT44815OPTA"
+		years_of_research = 2
+		badboy = -5
         set_country_flag = texas_recaptured
         war_exhaustion = -30
-        prestige = 5
+        prestige = 20
         any_pop = {
             limit = { has_pop_culture = texan }
             militancy = 10
@@ -732,6 +740,7 @@ country_event = {
         name = "EVT44825OPTA"
         set_country_flag = treaty_of_guadalupe_hidalgo
         prestige_factor = -0.5
+        USA = { set_country_flag = mexico_defeated }
         treasury = 100000
         random_owned = {
             limit = {
@@ -1065,20 +1074,13 @@ country_event = {
 
     trigger = {
         tag = TEX
-        war_with = MEX
-        national_provinces_occupied = 0.25
-        any_owned_province = { country_units_in_province = MEX }
-        NOT = { has_country_flag = santa_ana_captured }
-		OR = {
-			AND = {
-				TEX = { ai = yes }
-				MEX = { ai = yes }
-			}
-			AND = {
-				any_owned_province = { country_units_in_province = TEX }
-				NOT = { blockade = 1 }
-			}
-		}
+		war_with = MEX
+		national_provinces_occupied = 0.25
+		NOT = { national_provinces_occupied = 0.50
+		any_owned_province = { country_units_in_province = MEX }
+		any_owned_province = { country_units_in_province = TEX }
+		NOT = { has_country_flag = santa_ana_captured }
+		NOT = { blockade = 1 }
     }
 
     mean_time_to_happen = {

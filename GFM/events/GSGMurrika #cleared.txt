@@ -145,13 +145,7 @@ country_event = {
         USA_91 = { remove_core = MEX } #Idaho
         USA_111 = { remove_core = MEX } #Wyoming
         USA_126 = { remove_core = MEX } #Kansas
-		any_owned = {
-			limit = {
-				is_core = MEX
-			}
-			secede_province = MEX
-		}
-        create_vassal = MEX
+        release_vassal = MEX
         diplomatic_influence = { who = MEX value = 200 }
         MEX = {
             set_country_flag = treaty_of_guadalupe_hidalgo
@@ -194,13 +188,7 @@ country_event = {
             }
             remove_core = USA
         }
-		any_owned = {
-			limit = {
-				is_core = MEX
-			}
-			secede_province = MEX
-		}
-        create_vassal = MEX
+        release_vassal = MEX
         diplomatic_influence = { who = MEX value = 200 }
         MEX = {
             leadership = 100
@@ -221,13 +209,7 @@ country_event = {
     option = {
         name = "Agreed."
         prestige = -15
-		any_owned = {
-			limit = {
-				is_core = MEX
-			}
-			secede_province = MEX
-		}
-        create_vassal = MEX
+        release_vassal = MEX
         diplomatic_influence = { who = MEX value = 200 }
         MEX = {
             leadership = 100
@@ -276,13 +258,7 @@ country_event = {
             }
             remove_core = USA
         }
-		any_owned = {
-			limit = {
-				is_core = MEX
-			}
-			secede_province = MEX
-		}
-        create_vassal = MEX
+        release_vassal = MEX
         diplomatic_influence = { who = MEX value = 200 }
         MEX = {
             leadership = 100
@@ -302,13 +278,7 @@ country_event = {
     option = {
         name = "Agreed."
         prestige = -15
-		any_owned = {
-			limit = {
-				is_core = MEX
-			}
-			secede_province = MEX
-		}
-        create_vassal = MEX
+        release_vassal = MEX
         diplomatic_influence = { who = MEX value = 200 }
         MEX = {
             leadership = 100

@@ -984,7 +984,7 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = "What a relief."
+        name = "EVTOPTB19030"
         prestige = 10
     }
 }

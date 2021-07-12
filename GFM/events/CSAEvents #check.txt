@@ -2801,7 +2801,13 @@ country_event = {
     picture = "san_francisco"
 
     trigger = {
-        is_culture_group = american_cultures
+		OR = {
+			is_culture_group = american_cultures
+			AND = {
+				MEX_85_1 = { owned_by = THIS }
+				MEX_85_2 = { owned_by = THIS }
+			}
+		}
         year = 1855
         NOT = {
             has_country_flag = california_boom_flag

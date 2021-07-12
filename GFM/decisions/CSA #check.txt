@@ -921,7 +921,6 @@ political_decisions = {
     #
     #Aberdeen Act for UK
     aberdeen_act = {
-		picture = aberdeen_act
         potential = {
             tag = ENG
             is_greater_power = yes

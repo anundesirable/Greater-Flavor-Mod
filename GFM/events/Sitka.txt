@@ -1,364 +1,4 @@
 country_event = {
-    id = 123644
-    fire_only_once = yes
-    title = "The Tragic Week"
-    desc = "ARGTRAGICWEEKLOC"
-    picture = "Semana_Tragica" 
-    fire_only_once = yes
-
-    trigger = {
-        tag = ARG
-        year = 1919
-        owns = 2500
-        NOT = { government = proletarian_dictatorship }
-		NOT = { ruling_party_ideology = communist ruling_party_ideology = socialist }
-    }
-
-    mean_time_to_happen = { months = 3 }
-
-    option = {
-        name = "Truly tragic!"
-        any_pop = { consciousness = 0.1 }
-        any_pop = {
-			limit = {
-				location = {
-					province_id = 2348
-				}
-			}
-			reduce_pop = 0.99
-			consciousness = 7
-			militancy = 5
-        }
-    }
-}
-country_event = {
-    id = 123643
-    fire_only_once = yes
-    title = "The Tragic Week"
-    desc = "SPATRAGICWEEKLOC"
-    picture = "TragicWeekcat" 
-    fire_only_once = yes
-
-    trigger = {
-        tag = SPA
-        year = 1909
-        owns = 498
-        NOT = { government = proletarian_dictatorship }
-		NOT = { ruling_party_ideology = communist ruling_party_ideology = socialist }
-    }
-
-    mean_time_to_happen = { months = 3 }
-
-    option = {
-        name = "Truly tragic!"
-        any_pop = { consciousness = 0.1 }
-        any_pop = {
-			limit = {
-				location = {
-					province_id = 498
-				}
-			}
-			reduce_pop = 0.99
-			consciousness = 7
-			militancy = 5
-        } 
-    }
-}
-country_event = {
-    id = 123642
-    fire_only_once = yes
-    title = "The Panic of $YEAR$"
-    desc = "PANICOFEIGHTEENTHIRTYSEVENLOC"
-    picture = "Panic1837" 
-    fire_only_once = yes
-    trigger = {
-        tag = USA
-        year = 1837
-    }
-    mean_time_to_happen = { days = 1 }
-    option = {
-        name = "Yikes!"
-        any_pop = { consciousness = 0.5 }
-		add_country_modifier = { name = panic_of_eighteenthirtyseven duration = 400 }
-        prestige = -12
-	}
-}
-country_event = {
-    id = 123641
-    fire_only_once = yes
-    title = "More infamy reduction"
-    desc = "You have taken the option to set infamy reduction to -0.15 a month."
-    fire_only_once = yes
-	is_triggered_only = yes
-    option = {
-        name = "Poggers"
-        any_country = {
-			add_country_modifier = {
-                name = lower_infamy
-				duration = -1
-			}
-        }
-	}
-}
-country_event = {
-    id = 123640
-    fire_only_once = yes
-    title = "Daguerreotype photography"
-    desc = "DAGUERROTYPELOC"
-    picture = "deguerrotype" 
-    fire_only_once = yes
-    trigger = {
-        OR = {
-			tag = FRA
-			tag = BOR
-		}
-        year = 1839
-    }
-    mean_time_to_happen = { months = 3 }
-    option = {
-        name = "The age of photography has begun!"
-        any_pop = { consciousness = -0.1 }
-        prestige = 12
-	}
-}
-country_event = {
-    id = 123639
-    fire_only_once = yes
-    title = "Why are you so dumb, AI UK"
-    desc = "I'll win this war for you"
-    fire_only_once = yes
-
-    trigger = {
-        tag = ENG
-		ai = yes
-		war_with = MAT
-        owns = 2076
-        owns = 2087
-    }
-
-    mean_time_to_happen = { days = 90 }
-
-    option = {
-        name = "Lol"
-        end_war = MAT
-		MAT = { annex_to = THIS }
-	}
-}
-country_event = {
-    id = 123638
-    fire_only_once = yes
-    title = "The Emu War"
-    desc = "EMUWARLOC"
-    picture = "emu_war" 
-    fire_only_once = yes
-
-    trigger = {
-        tag = AST
-        year = 1932
-        owns = 2500
-    }
-
-    mean_time_to_happen = { months = 3 }
-
-    option = {
-        name = "We can't afford to do anything about it."
-        any_pop = { consciousness = 1.5 }
-        2500 = { add_province_modifier = { name = Emus duration = 1000 } }
-	}
-    option = {
-        name = "Send the farmers guns so they can deal with it themselves."
-        treasury = -50000
-        2500 = { add_province_modifier = { name = Emus duration = 700 } } 
-	}
-    option = {
-        name = "To war with the emu menace!"
-        treasury = -130000
-        2500 = { add_province_modifier = { name = Emus duration = 400 } }
-        any_pop = { consciousness = 1.5 }
-    }
-}
-country_event = {
-    id = 123637
-    title = "The Bay Islands"
-    desc = "Britain has conceded the Bay Islands to us, bringing our long and bitter dispute to an end."
-	picture = "bay_islands"
-	is_triggered_only = yes
-    option = {
-        name = "Huzzah!"
-        ENG = { 3393 = { secede_province = THIS } }
-    }
-}
-country_event = {
-    id = 123636
-    title = "Pozsega"
-    desc = "Without a land connection to Pozsega, its owners can no longer defend it. We will therefore take it over."
-	is_triggered_only = yes
-    option = {
-        name = "Huzzah!"
-        777 = { secede_province = THIS }
-    }
-}
-country_event = {
-    id = 123635
-    title = "The loss of Poschegg"
-    desc = "Without a land connection to Poschegg, the owners of Warasdin have taken it over."
-    trigger = {
-       owns = 777
-	   NOT = {
-		owns = 772
-	   }
-	   NOT = {
-		owns = 786
-	   }
-	   NOT = {
-		owns = 793
-	   }
-	   NOT = {
-		owns = 779
-	   }
-	   NOT = {
-		owns = 785
-	   }
-	   NOT = {
-		owns = 776
-	   }
-    }
-    mean_time_to_happen = {
-        days = 1
-    }
-    option = {
-        name = "Tragic!"
-        776 = { owner = { country_event = 123636 } }
-    }
-}
-country_event = {
-    id = 123634
-    title = "Coto"
-    desc = "Without a land connection to Coto, its owners can no longer defend it. We will therefore take it over."
-	is_triggered_only = yes
-    option = {
-        name = "Huzzah!"
-        3447 = { secede_province = THIS }
-    }
-}
-country_event = {
-    id = 123633
-    title = "The loss of Coto"
-    desc = "Without a land connection to Coto, the owners of Panama have taken it over."
-    trigger = {
-       owns = 3447
-	   NOT = {
-		owns = 2205
-	   }
-	   NOT = {
-		owns = 2203
-	   }
-    }
-    mean_time_to_happen = {
-        days = 1
-    }
-    option = {
-        name = "Tragic!"
-        2203 = { owner = { country_event = 123634 } }
-    }
-}
-country_event = {
-    id = 123632
-    title = "Joshua Slocum & the first solo circumnavigation"
-    desc = "FIRSTCIRCUMNAV"
-    picture = "slocum"
-    fire_only_once = yes
-    trigger = {
-       tag = USA
-	   year = 1895
-	   NOT = { year = 1868 }
-	   num_of_ports = 1
-	   war = no
-    }
-    mean_time_to_happen = {
-        months = 1
-    }
-    option = {
-        name = "Marvellous!"
-        any_pop = {
-            limit = {
-                OR = {
-				has_pop_culture = yankee
-				has_pop_culture = dixie
-				}
-            }
-            consciousness = -0.1
-        }
-		prestige = 15
-    }
-}
-country_event = {
-    id = 123631
-    title = "Lynn shoeworkers' strike"
-    desc = "OHNOWEWANTMORESHOEPAY"
-    picture = "lynn_strike"
-    fire_only_once = yes
-    trigger = {
-       tag = USA
-	   year = 1860
-	   NOT = { year = 1863 }
-	   owns = 243
-    }
-    mean_time_to_happen = {
-        months = 10
-    }
-    option = {
-        name = "Get them back to the stove where they belong!"
-        any_pop = {
-            limit = {
-                has_pop_culture = yankee
-                location = {
-                    province_id = 243
-				}
-            }
-            consciousness = 5
-            militancy = 2
-			dominant_issue = {
-                factor = 0.4
-                value = acceptable_subsidies
-            }
-            scaled_militancy = {
-                factor = 2
-                issue = acceptable_minimum_wage
-            }
-        }
-    }
-}
-country_event = {
-    id = 123630
-    title = "President runs over old lady"
-    desc = "During one of his increasingly frequent drunken rides on his horsewaggon, today president Franklin Pierce carelessly ran over an old lady. He was arrested but released free of charge."
-    picture = "franklin_pierce_old_lady"
-    fire_only_once = yes
-    trigger = {
-       tag = USA
-	   year = 1853
-	   ruling_party_ideology = conservative
-	   NOT = { year = 1857 }
-    }
-    mean_time_to_happen = {
-        months = 10
-    }
-    option = {
-        name = "What an embarassment!"
-        any_pop = {
-            limit = {
-                OR = {
-					has_pop_culture = yankee
-					has_pop_culture = dixie
-				}
-            }
-            consciousness = 0.5
-        }
-        prestige = -1
-    }
-}
-country_event = {
     id = 123457
     title = "Intervention in Xinjiang"
     desc = "The Dungans have revolted in Xinjiang to try to gain independance while the Qing are preoccupied with the Taiping rebellion. We can use this opportunity to annex the lands in western Xinjiang under the pretext of protecting Russian interests there."
@@ -2463,7 +2103,7 @@ country_event = {
     desc = "EVTDESC123494"
     fire_only_once = yes
     picture = "Novara"
-    mean_time_to_happen = { months = 1 }
+    mean_time_to_happen = { months = 5 }
     trigger = {
         owns = 736
         NOT = { has_global_flag = AUS_Nicobar }
@@ -2477,7 +2117,7 @@ country_event = {
     option = {
         name = "We'll consider it."
         set_global_flag = AUS_Nicobar
-        prestige = 6
+        prestige = 20
     }
 }
 country_event = {
@@ -3958,32 +3598,11 @@ country_event = {
     picture = "ott_alg"
     option = {
         name = "Send them back to France!"
-        any_country = {
-			limit = {
-				tag = FRA
-				owns = 1700
-			}
-			THIS = {
-				war = {
-					target = FRA
-					attacker_goal = { casus_belli = liberate_puppet_no_infamy country = ALD }
-					defender_goal = { casus_belli = humiliate_no_infamy }
-				}
-			}
-		}
-		any_country = {
-			limit = {
-				tag = BOR
-				owns = 1700
-			}
-			THIS = {
-				war = {
-					target = BOR
-					attacker_goal = { casus_belli = liberate_puppet_no_infamy country = ALD }
-					defender_goal = { casus_belli = humiliate_no_infamy }
-				}
-			}
-		}
+        war = {
+            target = FRA
+            attacker_goal = { casus_belli = liberate_puppet_no_infamy country = ALD }
+            defender_goal = { casus_belli = humiliate_no_infamy }
+        }
         ALD = { primary_culture = maghrebi }
     }
 }
@@ -4917,12 +4536,12 @@ country_event = {
         1323 = { secede_province = SRI }
         SRI = { government = absolute_monarchy }
         SRI = {
-			war = {
-				target = ENG
-				attacker_goal = { casus_belli = acquire_core_state state_province_id = 1321 }
-				defender_goal = { casus_belli = conquest_any }
-				call_ally = yes
-			}
+        war = {
+            target = ENG
+            attacker_goal = { casus_belli = acquire_core_state state_province_id = 1321 }
+            defender_goal = { casus_belli = conquest_any }
+            call_ally = yes
+        }
         }
     }
 }
@@ -4941,15 +4560,13 @@ country_event = {
     }
     option = {
         name = "Who cares?"
-        prestige = -5
+        prestige = -15
         badboy = -1
-		ai_chance = { factor = 20 }
     }
     option = {
         name = "Demand repayment!"
-        prestige = 5
+        prestige = 15
         MEX = { country_event = 123556 }
-		ai_chance = { factor = 80 }
     }
 }
 country_event = {
@@ -4961,17 +4578,15 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "We shall pay."
-        prestige = -10
+        prestige = -15
         money = -600000
         FRA = { money = 600000 }
         FRA = { country_event = 123558 }
-		ai_chance = { factor = 20 }
     }
     option = {
         name = "We will not budge!"
-        prestige = 10
+        prestige = 30
         FRA = { country_event = 123557 }
-		ai_chance = { factor = 80 }
     }
 }
 country_event = {
@@ -5018,13 +4633,11 @@ country_event = {
             defender_goal = { casus_belli = status_quo }
         }
         badboy = -3
-		ai_chance = { factor = 95 }
     }
     option = {
         name = "Back down at the last moment."
-        prestige = -20
-        MEX = { prestige = 20 }
-		ai_chance = { factor = 5 }
+        prestige = -50
+        MEX = { prestige = 50 }
     }
 }
 country_event = {
@@ -5958,7 +5571,6 @@ country_event = {
             tag = DAH
             tag = ZUL
             tag = GAZ
-			tag = UPB
             tag = KBO
             tag = TOU
             tag = BRZ
@@ -5992,7 +5604,6 @@ country_event = {
             tag = ENL
             tag = MLI
             tag = FLC
-			tag = USS
             tag = SCA
             tag = GEO
             tag = BRG
@@ -6054,8 +5665,6 @@ country_event = {
             tag = DAH
             tag = ZUL
             tag = GAZ
-			tag = UPB
-			tag = USS
             tag = KBO
             tag = TOU
             tag = BRZ
@@ -6125,7 +5734,6 @@ country_event = {
             tag = SPA
             tag = ETH
             tag = BEL
-			tag = USS
             tag = DEN
             tag = MYS
             tag = JAP
@@ -6150,7 +5758,6 @@ country_event = {
             tag = KNG
             tag = DAH
             tag = ZUL
-			tag = UPB
             tag = GAZ
             tag = KBO
             tag = TOU
@@ -7195,7 +6802,7 @@ country_event = {
 country_event = {
     id = 123593
     title = "Britain agrees"
-    desc = "Britain has agreed to forming an Entente."
+    desc = "Italy has refused our concessions."
     fire_only_once = yes
     is_triggered_only = yes
     option = {
@@ -7829,8 +7436,7 @@ country_event = {
         name = "If it will resolve conflict, we will give it up to France."
         prestige = -5
 		2415 = { remove_core = THIS }
-		2415 = { secede_province = RIG }
-		RIG = { annex_to = FROM }
+		RIG = { annex_to = FRA }
 		relation = {
 			who = FROM
 			value = 75
@@ -7952,7 +7558,6 @@ country_event = {
     option = {
         name = "Reject the arbitration!"
         prestige = 3
-		badboy = 1
 		BRZ = { country_event = 123622 }
 		diplomatic_influence = {
 			who = BRZ
@@ -8001,82 +7606,6 @@ country_event = {
             consciousness = 5
             militancy = 2
         }
-    }
-}
-country_event = {
-    id = 123627
-    title = "The Treaty of Ayacucho"
-    desc = "$FROMCOUNTRY$ has offered to negotiate a resolution to the Acre dispute by splitting it with us."
-    picture = "treaty_of_petropolis"
-    fire_only_once = yes
-	is_triggered_only = yes
-    option = {
-        name = "We agree!"
-        prestige = -5
-		relation = {
-			who = FROM
-			value = 50
-		}
-		any_owned = {
-			limit = {
-				province_id = 3381
-			}
-			remove_core = BOL
-			remove_core = PBC
-			remove_core = PEU
-			remove_core = LPL
-			secede_province = FROM
-		}
-		any_owned = {
-			limit = {
-				province_id = 3382
-			}
-			remove_core = BOL
-			remove_core = PBC
-			remove_core = LPL
-			secede_province = FROM
-		}
-		any_owned = {
-			limit = {
-				province_id = 3380
-			}
-			remove_core = BOL
-			remove_core = PBC
-			remove_core = LPL
-			secede_province = FROM
-		}
-		FROM = { country_event = 123629 }
-    }
-	option = {
-        name = "Never!"
-        prestige = 5
-		relation = {
-			who = FROM
-			value = -150
-		}
-		FROM = { country_event = 123628 }
-    }
-}
-country_event = {
-    id = 123628
-    title = "The Treaty of Ayacucho refused"
-    desc = "$FROMCOUNTRY$ has refused to negotiate a resolution to the Acre dispute."
-    picture = "treaty_of_petropolis"
-    fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-        name = "We will get it one way or another."
-    }
-}
-country_event = {
-    id = 123629
-    title = "The Treaty of Ayacucho accepted"
-    desc = "$FROMCOUNTRY$ has agreed to negotiate a resolution to the Acre dispute."
-    picture = "treaty_of_petropolis"
-    fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-        name = "A wise choice."
     }
 }
 #Dismantling Iberia

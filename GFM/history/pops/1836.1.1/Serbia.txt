@@ -343,7 +343,7 @@
     farmers = {
         culture = hungarian
         religion = catholic
-        size = 25000
+        size = 15000
     }
 
     farmers = {
@@ -433,7 +433,7 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 10375
+        size = 20375
     }
 
     ######Jews

@@ -133,13 +133,8 @@ political_decisions = {
             prestige = 35
             war = no
             MEX = {
-                OR = {
-					AND = {
-						has_recently_lost_war = yes
-						truce_with = THIS
-					}
-					exists = no
-				}
+                has_recently_lost_war = yes
+                truce_with = THIS
             }
             CAL = {
                 OR = {

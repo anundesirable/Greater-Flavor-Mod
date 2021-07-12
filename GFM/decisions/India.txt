@@ -1087,7 +1087,6 @@ political_decisions = {
             NOT = { tag = PNJ }
             NOT = { tag = KAL }
             NOT = { tag = MAK }
-			NOT = { tag = LAS }
             NOT = { tag = SIN }
             year = 1880
             OR = {

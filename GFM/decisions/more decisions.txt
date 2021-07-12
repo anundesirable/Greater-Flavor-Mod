@@ -181,6 +181,7 @@ political_decisions = {
                             owned_by = THIS
                         }
                         tag = THIS
+                        in_sphere = THIS
                         vassal_of = THIS
                     }
                     OR = {
@@ -194,6 +195,7 @@ political_decisions = {
                             owned_by = THIS
                         }
                         tag = THIS
+                        in_sphere = THIS
                         vassal_of = THIS
                     }
                     OR = {
@@ -209,6 +211,7 @@ political_decisions = {
                             owned_by = THIS
                         }
                         tag = THIS
+                        in_sphere = THIS
                         vassal_of = THIS
                     }
                     OR = {
@@ -222,6 +225,7 @@ political_decisions = {
                             owned_by = THIS
                         }
                         tag = THIS
+                        in_sphere = THIS
                         vassal_of = THIS
                     }
                     OR = {
@@ -241,7 +245,7 @@ political_decisions = {
         effect = {
             set_global_flag = created_iberia
             prestige = 20
-            badboy = 7
+            badboy = 17
             any_country = {
                 limit = {
                     OR = {

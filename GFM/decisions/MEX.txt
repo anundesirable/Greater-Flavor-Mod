@@ -1,81 +1,45 @@
 political_decisions = {
     restore_mexican_empire = {
-        potential = {
-            tag = MEX
-            government = democracy
-            NOT = { has_country_flag = we_have_tried_this_once }
-            OR = {
-                FRA = {
-                    exists = yes
-                    OR = {
-                        government = hms_government
-                        government = prussian_constitutionalism
-                        government = absolute_monarchy
-                        government = absolute_empire
-                        government = semi_constitutional_empire
-                        government = constitutional_empire
-                    }
-                }
-                BOR = {
-                    exists = yes
-                    OR = {
-                        government = hms_government
-                        government = prussian_constitutionalism
-                        government = absolute_monarchy
-                        government = absolute_empire
-                        government = semi_constitutional_empire
-                        government = constitutional_empire
-                    }
-                }
-            }
-        }
-        allow = {
-            war = no
-            OR = {
-                ruling_party_ideology = conservative
-                ruling_party_ideology = reactionary
-            }
-            average_militancy = 3
-        }
-
-        effect = {
-            government = constitutional_empire
-            election = yes
-            random_owned = {
-                limit = { owner = { has_country_modifier = santa_ana_rule } }
-                owner = { remove_country_modifier = santa_ana_rule }
-            }
-            any_pop = {
-                scaled_militancy = {
-                    ideology = liberal
-                    factor = 8
-                }
-                scaled_militancy = {
-                    ideology = socialist
-                    factor = 8
-                }
-                scaled_militancy = {
-                    ideology = conservative
-                    factor = 6
-                }
-            }
-            random_country = {
-                limit = {
-                    primary_culture = french
-                    capital = 425
-                }
-                relation = {
-                    who = THIS
-                    value = 100
-                }
-                diplomatic_influence = {
-                    who = THIS
-                    value = 100
-                }
-            }
-            set_country_flag = we_have_tried_this_once
-        }
-    }
+		potential = {
+			tag = MEX
+			year = 1865
+			government = democracy
+			NOT = { has_country_flag = we_have_tried_this_once }
+		}
+		allow = {
+			war = no
+			OR = {
+				ruling_party_ideology = conservative
+				ruling_party_ideology = reactionary
+			}
+			average_militancy = 2
+		}
+		
+		effect = {
+			government = hms_government
+			any_pop = {
+				scaled_militancy = {
+					ideology = liberal
+					factor = 8
+				}
+			}
+			random_country = {
+				limit = {
+					primary_culture = french
+					capital = 425
+				}	
+				relation = {
+					who = THIS
+					value = 100
+				}
+				diplomatic_influence = {
+					who = THIS
+					value = 100
+				}
+			}
+			set_country_flag = we_have_tried_this_once
+		}
+	}
 
     treaty_of_guadalupe_hidalgo = {
         picture = treaty_of_guadalupe_hidalgo
@@ -95,6 +59,17 @@ political_decisions = {
             OR = {
                 2172 = { controlled_by = USA }
                 has_global_flag = guadalupe_should_happen_now
+                AND = {
+                    MEX = {
+                        ai = yes
+                        war_exhaustion = 0.65
+                    }
+                    ai = yes
+                    is_sphere_leader_of = MEX
+                    war = no
+                    truce_with = MEX
+                    has_recently_lost_war = no
+                }
             }
             NOT = {
                 any_owned_province = { controlled_by = MEX }
@@ -119,10 +94,7 @@ political_decisions = {
         potential = {
             exists = yes
             OR = {
-				AND = {
-					tag = MEX
-					has_global_flag = mexican_victory
-				}
+                tag = MEX
                 tag = TEX
                 tag = DES
                 tag = CAL
@@ -147,16 +119,7 @@ political_decisions = {
                     USA = { has_recently_lost_war = yes }
                 }
             }
-            any_core = { 
-				continent = north_america 
-				NOT = { 
-					province_id = 2190 
-					province_id = 2196 
-					province_id = 2200 
-					province_id = 3393
-				} 
-				owned_by = THIS 
-			}
+            any_core = { continent = north_america owned_by = THIS }
         }
 
         effect = {
@@ -215,28 +178,104 @@ political_decisions = {
             }
         }
     }
-    #relcaim_UCA = {
-    #    picture = map_central_america
-    #    potential = {
-    #        tag = MEX
-    #        has_country_flag = manifest_destiny_refuted
-    #        NOT = { has_country_flag = relcaim_UCA }
-    #    }
-    #    allow = {
-    #        war = no
-    #        nationalism_n_imperialism = 1
-    #        war_policy = jingoism
-    #    }
-    #    effect = {
-    #        set_country_flag = relcaim_UCA
-    #        badboy = 15
-    #        GUA = { all_core = { add_core = MEX } }
-    #        ELS = { all_core = { add_core = MEX } }
-    #        HON = { all_core = { add_core = MEX } }
-    #        NIC = { all_core = { add_core = MEX } }
-    #        COS = { all_core = { add_core = MEX } }
-    #    }
-    #}
+    central_american_recuperation = {
+	picture = manifest_destiny
+		potential = {
+			tag = MEX
+			is_greater_power = yes
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			NOT = { has_country_flag = centralamericarecovered }
+			GUA = { exists = yes }
+		}
+		allow = {
+			war = no
+			133 = { owned_by = MEX }
+		}
+		effect = {
+			any_pop = {
+				militancy = 0.5
+				consciousness = 1
+			}
+			set_country_flag = centralamericarecovered
+			add_accepted_culture = central_american
+			random_list = {
+				25 = { }
+				25 = { badboy = 1 }
+				25 = { badboy = 2 }
+				25 = { badboy = 3 }
+			}
+			UCA_2186 = { add_core = MEX } #Guatemala
+			UCA_2191 = { add_core = MEX } #El Salvador
+			UCA_2193 = { add_core = MEX } #Honduras
+			UCA_2197 = { add_core = MEX } #Nicaragua
+			UCA_2201 = { add_core = MEX } #Costa Rica
+			inherit = GUA
+			inherit = HON
+			inherit = ELS
+			inherit = NIC
+			inherit = COS
+			inherit = LOS
+			2190 = { remove_core = MEX }
+			MIK = { all_core = { remove_core = MEX } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	reverse_manifest_destiny = {
+	picture = new_france_louisiana
+		potential = {
+			tag = MEX
+			is_greater_power = yes
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			has_country_flag = oregon_claimed
+			NOT = { has_country_flag = reversemanifestdestiny }
+		}
+		allow = {
+			war = no
+			nationalism_n_imperialism = 1
+			NOT = { truce_with = USA }
+		}
+		effect = {
+			set_country_flag = reversemanifestdestiny
+			any_pop = {
+				militancy = 4.0
+				consciousness = 1.5
+			}
+			prestige = 35
+			random_list = {
+				25 = { }
+				25 = { badboy = 1 }
+				25 = { badboy = 2 }
+				25 = { badboy = 3 }
+			}
+			casus_belli = {
+				target = USA
+				type = acquire_all_cores
+				months = 240
+			}
+			USA_106 = { add_core = MEX } #Colorado
+			USA_111 = { add_core = MEX } #Wyoming
+			USA_116 = { add_core = MEX } #Montana
+			USA_118 = { add_core = MEX } #North Dakota
+			USA_121 = { add_core = MEX } #South Dakota
+			USA_124 = { add_core = MEX } #Nebraska
+			USA_116 = { add_core = MEX } #Kansas
+			USA_129 = { add_core = MEX } #Oklahoma
+			USA_139 = { add_core = MEX } #Louisiana
+			USA_144 = { add_core = MEX } #Arkansas
+			USA_148 = { add_core = MEX } #Missouri
+			USA_151 = { add_core = MEX } #Iowa
+			USA_158 = { add_core = MEX } #Minnesota
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
     puppet_ULA = {
         picture = new_france_louisiana
         potential = {
@@ -288,22 +327,1220 @@ political_decisions = {
             }
         }
     }
-    philippines_n_cuba = {
-        picture = map_philippines
-        potential = {
-            tag = MEX
-            has_country_flag = manifest_destiny_refuted
-            NOT = { has_country_flag = philippines_n_cuba }
-        }
-        allow = {
-            war = no
-            nationalism_n_imperialism = 1
-            war_policy = jingoism
-        }
-        effect = {
-            set_country_flag = philippines_n_cuba
-            badboy = 12
-            PHL = { all_core = { add_core = MEX } }
-        }
-    }
+	
+    alliance_with_the_repressors = {
+	picture = ever_victorious
+		potential = {
+			NOT = { 
+				OR = { 
+					has_country_flag = afros_integrated
+					year = 1890
+				}
+			}
+			tag = MEX
+			is_greater_power = yes
+			has_country_flag = aztecpride
+			has_country_flag = centralamericarecovered
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			NOT = { alliance_with = ENG }
+		}
+		allow = {
+			ideological_thought = 1
+			prestige = 100
+			war = no
+			relation = { who = ENG value = 150 }
+		}
+		effect = {
+			relation = {
+				who = ENG
+				value = 50
+			}
+			prestige = -25
+			treasury = -25000
+			ENG = { treasury = 25000 }
+			create_alliance = ENG
+			poor_strata = {
+				militancy = 3
+				consciousness = 3
+			}
+			middle_strata = {
+				militancy = 1
+				consciousness = 2
+			}
+			rich_strata = {
+				consciousness = 1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	forced_education = {
+	picture = support_ruhr_industrialism
+		potential = {
+			tag = MEX
+			year = 1860
+			is_greater_power = yes
+			war = no
+			NOT = { has_country_flag = forced_education }
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			has_country_flag = oregon_claimed
+		}
+		allow = {
+			functionalism = 1
+			money = 500000
+		}
+		effect = {
+			random_list = {
+				25 = { treasury = -500000 }
+				25 = { treasury = -250000 }
+				25 = { treasury = -125000 }
+				25 = { treasury = -375000 }
+			}
+			set_country_flag = forced_education
+			country_event = 10778
+			any_pop = {
+				literacy = 0.25
+				average_consciousness = 2
+			}
+			any_pop = {
+				limit = {
+					NOT = {
+						has_pop_culture = mexican
+						has_pop_culture = central_american
+					}
+				}
+				consciousness = 5
+				militancy = 1.5
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	the_royal_agrarian_reform = {
+	picture = MEX_rancho
+		potential = {
+			year = 1870
+			has_country_flag = floridaclaimed
+			NOT = { has_country_flag = reforma_agraria }
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+		}
+		allow = {
+			social_science = 1
+			war = no
+			money = 500000
+			NOT = { average_militancy = 5 }
+			NOT = { badboy = 0.9 }
+			200 = { owned_by = MEX }
+		}
+		effect = {
+			set_country_flag = reforma_agraria
+			treasury = -500000
+			prestige = 1
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_culture = native_american_minor
+						has_pop_culture = cherokee
+						has_pop_culture = dakota
+						has_pop_culture = pueblo
+						has_pop_culture = cajun
+						has_pop_culture = dixie
+						has_pop_culture = yankee
+					}
+				}
+				militancy = 1
+				consciousness = 1
+			}
+			158 = {
+				add_province_modifier = {
+					name = northern_ejido_system_twice
+					duration = 5475
+				}
+			}
+			156 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			155 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			149 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			143 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			142 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			140 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			199 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			195 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			196 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			131 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			126 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			123 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			117 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			121 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			111 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			103 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			2148 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			101 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			98 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			97 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			92 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			78 = {
+				add_province_modifier = {
+					name = northern_ejido_system_twice
+					duration = 5475
+				}
+			}
+			83 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			90 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			135 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			133 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+			136 = {
+				add_province_modifier = {
+					name = northern_ejido_system
+					duration = 3650
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	afro_american_integration = {
+	picture = india_civil_service
+		potential = {
+			is_greater_power = yes
+			has_country_flag = forced_education
+			has_country_flag = reforma_agraria
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			NOT = { has_country_flag = afros_integrated }
+		}
+		allow = {
+			NOT = { average_militancy = 3 }
+			NOT = { badboy = 0.6 }
+			war = no
+			money = 125000
+		}
+		effect = {
+			badboy = -4
+			set_country_flag = afros_integrated
+			treasury = -125000
+			add_accepted_culture = afro_american
+			any_pop = {
+				limit = {
+					has_pop_culture = afro_american
+				}
+				literacy = 0.25
+				militancy = 0.5
+				consciousness = 3
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	texan_compensation = {
+	picture = all_texas 
+		potential = {
+			tag = MEX
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			has_country_flag = texas_recaptured
+			NOT = { exists = TEX }
+			NOT = { year = 1842 }
+			NOT = { has_country_flag = compensation_done }
+		}
+		allow = {
+			war = no
+			133 = { owned_by = MEX }
+		}
+		effect = {
+			set_country_flag = compensation_done
+			any_pop = {
+				limit = {
+					has_pop_culture = texan
+				}
+				militancy = 8
+				consciousness = 10
+			}
+			43 = {
+				add_province_modifier = {
+					name = texan_retribution
+					duration = 1825
+				}
+			}
+			132 = {
+				add_province_modifier = {
+					name = texan_retribution
+					duration = 1825
+				}
+			}
+			133 = {
+				add_province_modifier = {
+					name = texan_retribution
+					duration = 1825
+				}
+			}
+			134 = {
+				add_province_modifier = {
+					name = texan_retribution
+					duration = 1825
+				}
+			}
+			135 = {
+				add_province_modifier = {
+					name = texan_retribution
+					duration = 1825
+				}
+			}
+			136 = {
+				add_province_modifier = {
+					name = texan_retribution
+					duration = 1825
+				}
+			}
+			137 = {
+				add_province_modifier = {
+					name = texan_retribution
+					duration = 1825
+				}
+			}
+			138 = {
+				add_province_modifier = {
+					name = texan_retribution
+					duration = 1825
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	activate_mexico = {
+		potential = {
+			ai = no
+			NOT = { tag = MEX }
+			NOT = { has_global_flag = activate_mexico_not_ai }
+		}
+		allow = { }
+		effect = {
+			set_global_flag = activate_mexico_not_ai
+			USA = { set_global_flag = activate_mexico }
+			MEX = { set_global_flag = activate_mexico }
+		}
+	}
+	
+	purchase_alaska_mex = {
+	picture = map_alaska
+		potential = {
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			tag = MEX
+			RUS = {
+				owns = 1
+				has_country_flag = alaska_purchase_started
+			}
+			NOT = { has_global_flag = alaska_purchase_completed }
+			NOT = { has_country_flag = purchase_alaska_interest }
+			year = 1875
+		}
+		allow = {
+			war = no
+			nationalism_n_imperialism = 1
+		}
+		effect = {
+			relation = {
+				who = RUS
+				value = 75
+			}
+			set_country_flag = alaska_purchase_interest
+			set_country_flag = purchase_alaska_interest
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	hawaiian_port = {
+	picture = annex_hawaii
+		potential = {
+			tag = MEX
+			is_greater_power = yes
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			NOT = { has_country_flag = hawaiian_port_built }
+			658 = { owned_by = MEX }
+			year = 1865
+		}
+		allow = {
+			nationalism_n_imperialism = 1
+			money = 100000
+		}
+		effect = {
+			set_country_flag = hawaiian_port_built
+			treasury = -100000
+			658 = { naval_base = 4 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	army_modernization = {
+	picture = entre_rios_independent
+		potential = {
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			NOT = { has_country_flag = mexican_army_modernized}
+			year = 1870
+			is_greater_power = yes
+			tag = MEX
+		}
+		allow = {
+			war = no
+			money = 50000
+			breech_loaded_rifles = 1
+			NOT = { badboy = 0.8 }
+		}
+		effect = {
+			treasury = -50000
+			prestige = 20
+			set_country_flag = mexican_army_modernized
+			add_country_modifier = {
+				name = mexican_national_staff
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	mexico_city_miracle = {
+	picture = maya_excavations
+		potential = {
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			has_country_flag = greatermexico
+			has_country_flag = rebellionscrushedomg
+			is_greater_power = yes
+			NOT = { has_country_flag = cdmx_stronk }
+		}
+		
+		allow = {
+			war = no
+			NOT = { war_exhaustion = 0.65 }
+			OR = {
+				2172 = { controlled_by = MEX }
+				2172 = { owned_by = MEX }
+			}
+			electricity = 1
+		}
+		
+		effect = {
+			prestige = 15
+			badboy = -2
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_culture = mayan
+						has_pop_culture = mesoamerican_indian
+						has_pop_culture = pueblo
+						has_pop_culture = mexican
+						has_pop_culture = central_american
+					}
+				}
+				militancy = -1
+			}
+			2172 = {
+				change_province_name = "Tenochtitlan"
+				life_rating = 10
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	claim_belize = {
+	picture = map_central_america
+		potential = {
+			tag = MEX
+			has_country_flag = greatermexico
+			is_greater_power = yes
+			has_country_flag = renamethem
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			NOT = { has_country_flag = belize_claimed_expansion }
+		}
+		allow = {
+			war = no
+			prestige = 125
+			NOT = { badboy = 0.6 }
+		}
+		effect = {
+			badboy = 1
+			set_country_flag = belize_claimed_expansion
+			prestige = 20
+			2190 = { add_core = MEX }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	claim_dominicana = {
+	picture = map_caribbean
+		potential = {
+			tag = MEX
+			is_greater_power = yes
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			NOT = { has_country_flag = dominicana_claimed }
+			has_country_flag = miskito_claimed_expansion
+		}
+		allow = {
+			war = no
+			year = 1865
+			prestige = 150
+			NOT = { badboy = 0.6 }
+		}
+		effect = {
+			badboy = 1
+			set_country_flag = dominicana_claimed
+			prestige = 20
+			2216 = { add_core = MEX }
+			2214 = { add_core = MEX }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	claim_spanish_antilles = {
+	picture = map_caribbean
+		potential = {
+			tag = MEX
+			is_greater_power = yes
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			has_country_flag = dominicana_claimed
+			NOT = { has_country_flag = spanishantillesclaimed }
+		}
+		allow = {
+			year = 1868
+			war = no
+			prestige = 200
+			NOT = { badboy = 0.6 }
+		}
+		effect = {
+			casus_belli = {
+				target = SPA
+				type = acquire_all_cores
+				months = 240
+			}
+			casus_belli = {
+				target = SPC
+				type = acquire_all_cores
+				months = 240
+			}
+			add_accepted_culture = caribeno
+			add_accepted_culture = afro_caribeno
+			badboy = 1
+			set_country_flag = spanishantillesclaimed
+			prestige = 20
+			SPA_2209 = { add_core = MEX } #Cuba
+			2222 = { add_core = MEX } #Puerto Rico
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	claim_filipinas = {
+	picture = map_phillipines
+		potential = {
+			tag = MEX
+			is_greater_power = yes
+			has_country_flag = spanishantillesclaimed
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			NOT = { has_country_flag = filipinas_claimed }
+		}
+		allow = {
+			year = 1875
+			war = no
+			prestige = 250
+			NOT = { badboy = 0.6 }
+		}
+		effect = {
+			casus_belli = {
+				target = SPA
+				type = acquire_all_cores
+				months = 240
+			}
+			casus_belli = {
+				target = SPC
+				type = acquire_all_cores
+				months = 240
+			}
+			add_accepted_culture = filipino
+			badboy = 1
+			set_country_flag = filipinas_claimed
+			prestige = 20
+			SPA_1463 = { add_core = MEX } #Mindanao
+			SPA_1459 = { add_core = MEX } #Visayas
+			SPA_1455 = { add_core = MEX } #Luzon
+			SPA_2517 = { add_core = MEX } #Mariana Islands
+			2518 = { add_core = MEX }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	greater_mexico = {
+	picture = restore_mexican_empire
+		potential = {
+			has_country_flag = renamethem
+			prestige = 200
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			NOT = { has_country_flag = greatermexico }
+		}
+		allow = {
+			nationalism_n_imperialism = 1
+			war = no
+			ruling_party_ideology = conservative
+			NOT = { average_militancy = 3 }
+		}
+		effect = {
+			badboy = 1
+			set_country_flag = greatermexico
+			add_country_modifier = {
+				name = hispanic_ambitions
+				duration = -1
+			}
+			country_event = 10779
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	finish_the_reversion_fsa = {
+	picture = new_france_louisiana
+		potential = {
+			tag = MEX
+			is_greater_power = yes
+			has_country_flag = reversemanifestdestiny
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			NOT = { has_country_flag = reversion_finished_fsa }
+			exists = FSA
+		}
+		allow = {
+			war = no
+			78 = { owned_by = MEX }
+			200 = { owned_by = MEX }
+			158 = { owned_by = MEX }
+		}
+		effect = {
+			set_country_flag = reversion_finished_fsa
+			any_pop = {
+				limit = {
+					has_pop_culture = yankee
+				}
+				militancy = 0.5
+				consciousness = 0.5
+			}
+			any_owned = {
+				limit = {
+					is_core = FSA
+				}
+				remove_core = FSA
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	finish_the_reversion_csa = {
+	picture = new_france_louisiana
+		potential = {
+			year = 1856
+			tag = MEX
+			is_greater_power = yes
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			has_country_flag = reversemanifestdestiny
+			NOT = { has_country_flag = reversion_finished_csa }
+		}
+		
+		allow = {
+			war = no
+			78 = { owned_by = MEX }
+			200 = { owned_by = MEX }
+			158 = { owned_by = MEX }
+		}
+		
+		effect = {
+			set_country_flag = reversion_finished_csa
+			any_pop = {
+				limit = {
+					has_pop_culture = dixie
+				}
+				militancy = 2
+				consciousness = 1.5
+			}
+			any_owned = {
+				limit = {
+					is_core = CSA
+				}
+					remove_core = CSA
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	finish_the_reversion = {
+	picture = new_france_louisiana
+		potential = {
+			tag = MEX
+			is_greater_power = yes
+			has_country_flag = reversemanifestdestiny
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			NOT = { has_country_flag = reversion_finished }
+		}
+		
+		allow = {
+			war = no
+			78 = { owned_by = MEX }
+			200 = { owned_by = MEX }
+			158 = { owned_by = MEX }
+		}
+		
+		effect = {
+			set_country_flag = reversion_finished
+			any_pop = {
+				limit = {
+					has_pop_culture = yankee
+				}
+				militancy = 1.5
+				consciousness = 1
+			}
+			any_owned = {
+				limit = {
+					is_core = USA
+				}
+				remove_core = USA
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	claim_florida = {
+	picture = new_france_louisiana
+		potential = {
+			tag = MEX
+			is_greater_power = yes
+			78 = { owned_by = MEX }
+			158 = { owned_by = MEX }
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			NOT = { has_country_flag = floridaclaimed }
+			has_country_flag = aztecpride
+		}
+		allow = {
+			war = no
+			year = 1862
+			money = 100000
+		}
+		effect = {
+			prestige = 15
+			casus_belli = {
+				target = CSA
+				type = acquire_all_cores
+				months = 240
+			}
+			casus_belli = {
+				target = USA
+				type = acquire_all_cores
+				months = 240
+			}
+			any_pop = {
+				limit = {
+					has_pop_culture = yankee
+				}
+				militancy = 1
+				consciousness = 0.5
+			}
+			badboy = 0.1
+			USA_194 = { add_core = MEX } #Missisipi
+			USA_196 = { add_core = MEX } #Alabama
+			USA_200 = { add_core = MEX } #Florida
+			set_country_flag = floridaclaimed
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	belize_purchase_mex = {
+		picture = map_central_america
+		potential = {
+			tag = MEX
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			has_country_flag = belize_purchase
+			2190 = {
+				NOT = {
+					owned_by = MEX
+				}
+			}
+			2189 = {
+				OR = {
+					owned_by = THIS
+					owner = {
+						in_sphere = THIS
+						vassal_of = THIS
+						war = no
+						is_greater_power = no
+					}
+				}
+			}
+			BLZ = { exists = no }
+			OR = {
+				primary_culture = central_american
+				primary_culture = mexican
+				primary_culture = mayan
+				primary_culture = spanish
+			}
+		}
+		allow = {
+			war = no
+			money = 55000
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+			2190 = {
+				owner = {
+					war = no
+					relation = { who = THIS value = 100 }
+				}
+			}
+		}
+		effect = {
+			set_country_flag = belize_purchase
+			2190 = { owner = { country_event = 32550 } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	brazilian_dominion = {
+	picture = minas_gerais
+		potential = {
+			tag = MEX
+			has_country_flag = greatermexico
+			has_country_flag = lplreunited
+			is_greater_power = yes
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			NOT = { has_country_flag = braziliandominion }
+		}
+		
+		allow = {
+			revolution_n_counterrevolution = 1
+			NOT = { 
+				truce_with = BRZ
+				badboy = 0.9
+			}
+		}
+		
+		effect = {
+			set_country_flag = braziliandominion
+			prestige = 10
+			badboy = 3
+			casus_belli = {
+				target = BRZ
+				type = make_puppet
+				months = 240
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	sunset_invasion_spa = {
+	picture = restore_mexican_empire
+		potential = {
+			tag = MEX
+			is_greater_power = yes
+			has_country_flag = braziliandominion
+			1455 = { owned_by = MEX }
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			NOT = { has_country_flag = spanishcolonymex }
+			exists = SPA
+			NOT = { exists = SPC }
+		}
+		
+		allow = {
+			NOT = { badboy = 0.4 }
+			NOT = { truce_with = SPA }
+		}
+		
+		effect = {
+			set_country_flag = spanishcolonymex
+			badboy = 10
+			casus_belli = {
+				target = SPA
+				type = make_puppet
+				months = 240
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	sunset_invasion_spc = {
+	picture = restore_mexican_empire
+		potential = {
+			tag = MEX
+			is_greater_power = yes
+			has_country_flag = braziliandominion
+			1455 = { owned_by = MEX }
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			NOT = { has_country_flag = spanishcolonymex }
+			NOT = { exists = SPA }
+		}
+		
+		allow = {
+			NOT = { badboy = 0.4 }
+			exists = SPC
+			NOT = { truce_with = SPC }
+		}
+		
+		effect = {
+			set_country_flag = spanishcolonymex
+			badboy = 10
+			casus_belli = {
+				target = SPC
+				type = make_puppet
+				months = 240
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	rename_the_louisiana_and_the_northwest = {
+	picture = new_france_louisiana
+		potential = {
+			tag = MEX
+			78 = { owned_by = MEX }
+			158 = { owned_by = MEX }
+			200 = { owned_by = MEX }
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			NOT = { has_country_flag = renamethem }
+		}
+		allow = {
+			war = no
+		}	
+		effect = {
+			set_country_flag = renamethem
+			any_pop = {
+				consciousness = 1
+			}
+			78 = { change_province_name = "Puerto Mar" state_scope = { change_region_name = "Colombia" } }
+			3465 = { change_province_name = "Bahia" }
+			3464 = { change_province_name = "Margaritas" }
+			3466 = { change_province_name = "Manito" }
+			79 = { change_province_name = "La Puerta" }
+			80 = { change_province_name = "Salida" }
+			81 = { change_province_name = "Puerto San Agustin" }
+			82 = { change_province_name = "Colon" }
+			3461 = { change_province_name = "Huasco" }
+			3462 = { change_province_name = "Rivas" }
+			3463 = { change_province_name = "Girasol" }
+			83 = { change_province_name = "Don Hidalgo" }
+			91 = { change_province_name = "Seguridad" state_scope = { change_region_name = "Bosques" } }
+			92 = { change_province_name = "Alta" }
+			3475 = { change_province_name = "Avista" }
+			3476 = { change_province_name = "Abedul" }
+			93 = { change_province_name = "Calabar" }
+			106 = { change_province_name = "Cumbres" }
+			111 = { change_province_name = "Treboles" }
+			112 = { change_province_name = "Fuente Liberacion" state_scope = { change_region_name = "Fuentes" } }
+			3465 = { change_province_name = "Amoretti" }
+			113 = { change_province_name = "Curiosidad" state_scope = { change_region_name = "Nieves" } }
+			114 = { change_province_name = "Las Flores" }
+			3467 = { change_province_name = "Cornucopia" }
+			115 = { change_province_name = "Terminacion" }
+			116 = { change_province_name = "Rescate" }
+			117 = { change_province_name = "Limite Previo" state_scope = { change_region_name = "Dakota del Norte" } }
+			118 = { change_province_name = "Comienzo" }
+			119 = { change_province_name = "Terminal" }
+			120 = { change_province_name = "Alamos" state_scope = { change_region_name = "Dakota del Sur" } }
+			121 = { change_province_name = "Dakotas" }
+			122 = { change_province_name = "Provincia" }
+			123 = { change_province_name = "Antes Rio" state_scope = { change_region_name = "Iturbide" } }
+			124 = { change_province_name = "Secular" }
+			125 = { change_province_name = "Rampa" }
+			126 = { change_province_name = "Previo" state_scope = { change_region_name = "Resurgimiento" } }
+			127 = { change_province_name = "Aztlan" }
+			130 = { change_province_name = "Liberados" state_scope = { change_region_name = "Reserva" } }
+			131 = { change_province_name = "Chichimequia" }
+			139 = { change_province_name = "Punta" state_scope = { change_region_name = "Luisiana" } }
+			140 = { change_province_name = "Escondido" }
+			141 = { change_province_name = "Desembocadura" }
+			142 = { change_province_name = "Gran Rio" }
+			143 = { change_province_name = "Limpios" state_scope = { change_region_name = "Terminal" } }
+			144 = { change_province_name = "Fuerte Proteccion" }
+			145 = { change_province_name = "El Camino" }
+			146 = { change_province_name = "Frente Rio" state_scope = { change_region_name = "Liberacion" } }
+			147 = { change_province_name = "Profundidades" }
+			148 = { change_province_name = "Lanza" }
+			149 = { change_province_name = "Infiltramiento" }
+			150 = { change_province_name = "Libertad" }
+			151 = { change_province_name = "Montes" state_scope = { change_region_name = "Los Altos" } }
+			152 = { change_province_name = "Monte Juarez" }
+			153 = { change_province_name = "Revolucion" }
+			154 = { change_province_name = "Reserva" }
+			155 = { change_province_name = "Externo" state_scope = { change_region_name = "La Punta" } }
+			156 = { change_province_name = "Legitimo" }
+			157 = { change_province_name = "Puerta Norte" }
+			158 = { change_province_name = "Lagos Altos" }
+			192 = { change_province_name = "Tomas" state_scope = { change_region_name = "El Gran Rio" } }
+			193 = { change_province_name = "Union" }
+			194 = { change_province_name = "Mueble" }
+			195 = { change_province_name = "Comienzo" state_scope = { change_region_name = "Nueva Sonora" } }
+			3310 = { change_province_name = "Florencia" }
+			196 = { change_province_name = "El Salto" }
+			197 = { change_province_name = "Puerto Uague" }
+			198 = { change_province_name = "La Conocida" }
+			199 = { change_province_name = "Mediadura" }
+			200 = { change_province_name = "Venecia" }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	aztec_pride = {
+	picture = manufacturing_belt
+		potential = {
+			tag = MEX
+			is_greater_power = yes
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			NOT = { has_country_flag = aztecpride }
+			133 = { owned_by = MEX }
+			2189 = { owned_by = MEX }
+			2203 = { owned_by = MEX }
+		}
+		allow = {
+			idealism = 1
+			133 = { owned_by = MEX }
+			2189 = { owned_by = MEX }
+			2203 = { owned_by = MEX }
+			is_greater_power = yes
+			war = no
+		}
+		effect = {
+			set_country_flag = aztecpride
+			prestige = 35
+			country_event = 10777
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	claim_oregon = {
+	picture = manifest_destiny
+		potential = {
+			tag = MEX
+			OR = {
+				ai = no
+				has_global_flag = activate_mexico
+			}
+			is_greater_power = yes
+			has_country_flag = aztecpride
+			NOT = { has_country_flag = oregon_claimed }
+		}
+		allow = {
+			war = no
+			NOT = {
+				badboy = 0.9
+		}
+			year = 1842
+			medicine = 1
+		}
+		effect = {
+			casus_belli = {
+				target = USA
+				type = acquire_all_cores
+				months = 240
+			}
+			relation = {
+				who = ENG
+				value = 75
+			}
+			set_country_flag = oregon_claimed
+			any_pop = {
+				militancy = 2
+				consciousness = 2
+			}
+			prestige = 5
+			badboy = 0.1
+			USA_78 = { add_core = MEX }
+			USA_81 = { add_core = MEX }
+			USA_91 = { add_core = MEX }
+		}
+		ai_will_do = { factor = 1 }
+	}
 }

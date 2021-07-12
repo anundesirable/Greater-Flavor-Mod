@@ -14,6 +14,7 @@ country_event = {
         name = "EVTOPTA99100"
         set_country_flag = anglo_afghan_war
         prestige = 10
+        badboy = 3
         leave_alliance = AFG
         relation = { who = AFG value = -200 }
         diplomatic_influence = { who = AFG value = -200 }
@@ -452,7 +453,6 @@ country_event = {
         name = "EVTOPTB99201"
         prestige = 5
         war_exhaustion = 2.5
-		3356 = { secede_province = THIS }
         1212 = { secede_province = THIS }
         ENG = { country_event = 99202 }
         RUS = { country_event = 992021 }
@@ -570,9 +570,7 @@ country_event = {
     option = {
         name = "EVTOPT99910"
         prestige = 5
-        1212 = { remove_core = PER secede_province = AFG }
-		3355 = { remove_core = PER secede_province = AFG }
-		3356 = { remove_core = PER secede_province = AFG }
+        1212 = { remove_core = PER }
     }
 }
 

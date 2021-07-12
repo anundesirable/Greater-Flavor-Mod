@@ -320,93 +320,87 @@
 #Geneva (316000/79000 POPS)
 607 = {
     aristocrats = {
-        culture = arpitan
+        culture = french
         religion = reformed
         size = 200
     }
 
     bureaucrats = {
-        culture = arpitan
+        culture = french
         religion = reformed
         size = 120
     }
 
     officers = {
-        culture = arpitan
+        culture = french
         religion = reformed
         size = 60
     }
 
     clergymen = {
-        culture = arpitan
+        culture = french
         religion = reformed
         size = 300
     }
 
     artisans = {
-        culture = arpitan
+        culture = french
         religion = reformed
         size = 4000
     }
 
     soldiers = {
-        culture = arpitan
+        culture = french
         religion = reformed
         size = 1100
     }
 
     farmers = {
-        culture = arpitan
+        culture = french
         religion = reformed
         size = 37320
     }
 
     aristocrats = {
-        culture = arpitan
+        culture = french
         religion = catholic
         size = 300
     }
 
     bureaucrats = {
-        culture = arpitan
+        culture = french
         religion = catholic
         size = 80
     }
 
     officers = {
-        culture = arpitan
+        culture = french
         religion = catholic
         size = 50
     }
 
     clergymen = {
-        culture = arpitan
+        culture = french
         religion = catholic
         size = 350
     }
 
     artisans = {
-        culture = arpitan
+        culture = french
         religion = catholic
         size = 3000
     }
 
     soldiers = {
-        culture = arpitan
+        culture = french
         religion = catholic
         size = 1100
     }
 
     farmers = {
-        culture = arpitan
-        religion = catholic
-        size = 21230
-    }
-	
-	farmers = {
         culture = french
         religion = catholic
-        size = 10000
+        size = 31230
     }
 }
 3317 = {

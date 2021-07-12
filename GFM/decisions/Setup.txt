@@ -1114,16 +1114,19 @@ political_decisions = {
             1717 = { change_province_name = "Bouira" }
             1721 = { change_province_name = "El Tarf" }
             1813 = { change_province_name = "Tizi Ouzou" }
-            BRE = { treasury = 10000 }
-            LUB = { treasury = 10000 }
+            BRE = { money = 60000 }
+            LUB = { money = 60000 }
+            2720 = { change_province_name = "Skaggerak Approach" }
+            3373 = { change_province_name = "Filibe" }
+            451 = { change_province_name = "Lyon" }
             2419 = { change_province_name = "Campo Grande" }
-			2720 = { change_province_name = "Skagerrack Approach" }
             815 = { change_province_name = "Kircaali" }
             1149 = { change_province_name = "Salehabad" }
             3275 = { change_province_name = "Tekalong" }
             1774 = { change_province_name = "Laayoune" }
             911 = { change_province_name = "Bayir" }
             1206 = { change_province_name = "Turkmenabat" }
+            3412 = { change_province_name = "Jan Mayen" }
             398 = { change_province_name = "Bastogne" }
             2673 = { change_province_name = "Zhilinda" }
             2666 = { change_province_name = "Otrozhny" }
@@ -1142,6 +1145,7 @@ political_decisions = {
             1352 = { change_province_name = "Chumphon" }
             1722 = { change_province_name = "In Zghmir" }
             867 = { change_province_name = "Fethiye" }
+            830 = { change_province_name = "Orestias" }
             860 = { any_pop = { literacy = 0.05 } }
             860 = { any_pop = { limit = { has_pop_culture = turkish } literacy = 0.1 } }
             any_pop = {
@@ -1288,10 +1292,6 @@ political_decisions = {
             }
             any_pop = { limit = { has_pop_religion = catholic NOT = { has_pop_culture = assyrian} } literacy = 0.01 }
             any_pop = { limit = { OR = { has_pop_culture = greek has_pop_culture = armenian } } literacy = 0.05 }
-			add_country_modifier = {
-				name = Jizya_Egypt
-				duration = -1
-			}
         }
     }
 
@@ -2775,7 +2775,6 @@ political_decisions = {
                         tag = KAG
                         tag = SEN
                         tag = YZW
-						tag = SOC
                         tag = TKG
                     }
                 }
@@ -3367,26 +3366,6 @@ political_decisions = {
 
         effect = {
             set_country_flag = spectator
-        }
-    }
-	
-	one_point_five_infamy = {
-		alert = no
-        picture = starting_options
-        potential = {
-			has_country_flag = country_looking_through_options
-            NOT = { year = 1837 }
-            NOT = { has_global_flag = one_point_five_infamy_reduction }
-			ai = no
-        }
-        allow = {
-        }
-        effect = {
-            set_global_flag = one_point_five_infamy_reduction
-            country_event = 123641
-        }
-        ai_will_do = {
-            factor = 0
         }
     }
 	

@@ -18,10 +18,6 @@ country_event = {
 
     trigger = {
         year = 1848
-        OR = {
-            has_country_flag = hasmanifestdestiny
-            has_country_flag = manifest_destiny_refuted
-        }
         war = no
         owns = 104
         AND = {
@@ -561,7 +557,6 @@ country_event = {
         tag = USA
         year = 1845
         owns = 232 #NewYork
-		NOT = { year = 1850 }
         NOT = { has_country_flag = great_new_york_fire }
     }
 
@@ -704,7 +699,7 @@ country_event = {
                 consciousness = 1.5
             }
         }
-        set_country_flag = great_chicago_fire
+        set_country_flag = great_new_york_fire
     }
 
     option = {

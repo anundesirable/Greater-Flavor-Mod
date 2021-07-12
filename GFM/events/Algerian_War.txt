@@ -157,7 +157,7 @@ country_event = {
             diplomatic_influence = { who = THIS value = -200 }
         }
 
-        ai_chance = { factor = 0 }
+        ai_chance = { factor = 1 }
     }
 
     option = {
@@ -179,7 +179,7 @@ country_event = {
             }
         }
 
-        ai_chance = { factor = 1 }
+        ai_chance = { factor = 0 }
     }
 }
 
@@ -188,20 +188,18 @@ country_event = {
     title = "FRANCE_DEMANDS_BECHAR_TITLE"
     desc = "FRANCE_DEMANDS_BECHAR_DESC"
     picture = "battle_of_isly"
-	mean_time_to_happen = { months = 1 }
+	mean_time_to_happen = { months = 0 }
 	fire_only_once = yes
     trigger = {
 	    1713 = { owned_by = FRA }
 		1720 = { owned_by = MOR }
 		capital = 425
-		NOT = { has_global_flag = morocco_supports_france }
-		NOT = { year = 1850 }
 	}
 
     option = {
         name = "Let the Moroccans keep Béchar."
         relation = { who = MOR value = 400 }
-        ai_chance = { factor = 0 }
+        ai_chance = { factor = 0.1 }
     }
 
     option = {
@@ -209,7 +207,7 @@ country_event = {
 		badboy = 1
         relation = { who = MOR value = -50 }
 		MOR = { country_event = 100944 }
-        ai_chance = { factor = 1 }
+        ai_chance = { factor = 0.9 }
     }
 }
 
@@ -223,16 +221,15 @@ country_event = {
     option = {
         name = "We refuse to abandon Béchar! (France declares war)"
 		FRA = { country_event = 100945 }
-        ai_chance = { factor = 1 }
+        ai_chance = { factor = 0.2 }
     }
 
     option = {
         name = "We're not prepared to defend it. Abandon Béchar!"
 		1720 = { secede_province = FRA }
-		1720 = { remove_core = THIS }
 		prestige = -3
         relation = { who = FRA value = 100 }
-        ai_chance = { factor = 0 }
+        ai_chance = { factor = 0.8 }
 	}
 }
 
@@ -253,54 +250,6 @@ country_event = {
 		}
         ai_chance = { factor = 1 }
     }
-}
-
-country_event = {
-    id = 100946
-    title = "MOR_SUPPORT_ALD_TITLE"
-    desc = "MOR_SUPPORT_ALD_DESC"
-    picture = "french_fight_algeria"
-	fire_only_once = yes
-    trigger = { tag = MOR }
-	mean_time_to_happen = { months = 1 }
-
-    option = {
-        name = "We must come to the aid of our Algerian brothers-in-arms."
-		end_military_access = FRA
-		military_access = ALD
-		relation = { who = FRA value = -200 }
-		prestige = 5
-		treasury = -10000
-		ALD = { treasury = 10000 }
-		ai_chance = { factor = 0 }
-    }
-	
-	option = {
-        name = "A French presence in Africa would be catastrophic! (Historical)"
-		end_military_access = FRA
-		military_access = ALD
-		relation = { who = FRA value = -200 }
-		prestige = 5
-		ai_chance = { factor = 1 }
-    }
-
-    option = {
-        name = "Their case is doomed. We must support the French to survive."
-		end_military_access = ALD
-		military_access = FRA
-        relation = { who = FRA value = 200 }
-		relation = { who = ALD value = -200 }
-		prestige = -2
-		ALD = {
-		    casus_belli = {
-	            target = MOR
-	            type = humiliate_no_infamy
-	            months = 12
-			}
-		}
-		set_global_flag = morocco_supports_france
-		ai_chance = { factor = 0 }
-	}
 }
 
 #The Treaty of Tafna

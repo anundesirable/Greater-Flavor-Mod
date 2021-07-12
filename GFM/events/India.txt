@@ -466,7 +466,7 @@ country_event = {
             name = power_vacuum
             duration = 1825
         }
-        ENG = { country_event = 97116 days = 150 }
+        #ENG = { country_event = 97116 }
     }
 }
 
@@ -480,7 +480,6 @@ country_event = {
     news_desc_medium = "EVTDESC97116_NEWS_MEDIUM"
     news_desc_short = "EVTDESC97116_NEWS_SHORT"
     picture = "ranjit_singh_death"
-	is_triggered_only = yes
 
     trigger = {
         tag = ENG
@@ -551,7 +550,7 @@ country_event = {
 
     option = {
         name = "EVT97116OPTB"
-        #badboy = 2
+        badboy = 2
         relation = { who = PNJ value = -300 }
         leave_alliance = PNJ
         war = {

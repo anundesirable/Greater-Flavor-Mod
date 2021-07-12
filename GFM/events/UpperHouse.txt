@@ -774,7 +774,7 @@ country_event = {
             ideology = socialist
             value = 0.2
         }
-        NOT = {
+        not = {
             ruling_party_ideology = socialist
         }
         NOT = { has_country_flag = spectator ai = yes }

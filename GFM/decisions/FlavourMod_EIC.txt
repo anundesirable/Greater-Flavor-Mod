@@ -100,14 +100,10 @@ political_decisions = {
                 tag = ENL
             }
             OR = {
-                AND = {
-					is_our_vassal = EIC
-					exists = EIC
-				}
+                is_our_vassal = EIC
                 EIC = {
                     ai = yes
                     is_vassal = no
-					exists = yes
                 }
             }
             OR = {
@@ -589,27 +585,9 @@ political_decisions = {
         }
 
         effect = {
-			any_country = {	
-				limit = {
-					exists = ENG
-				}
-				THIS = {
-					any_owned = { secede_province = ENG }
-					annex_to = ENG
-					ENG = { inherit = EIC }
-				}
-			}
-			
-			any_country = {
-				limit = {
-					exists = ENL
-				}
-				THIS = {
-					any_owned = { secede_province = ENL }
-					annex_to = ENL
-					ENL = { inherit = EIC }
-				}
-			}
+            any_owned = { secede_province = ENG }
+            annex_to = ENG
+            ENG = { inherit = EIC }
         }
 
         ai_will_do = { factor = 1 }

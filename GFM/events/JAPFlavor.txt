@@ -691,7 +691,6 @@ country_event = {
             KAG = { average_militancy = 4 }
             SEN = { average_militancy = 4 }
             YZW = { average_militancy = 4 }
-			SOC = { average_militancy = 4 }
             JAP = { average_militancy = 4 }
         }
         NOT = { has_country_flag = sakuradamon_incident }
@@ -824,7 +823,6 @@ country_event = {
             has_global_flag = order_to_expel_barbarians
             JAP = { is_vassal = no }
             KAG = { is_vassal = no }
-			SOC = { is_vassal = no }
             YZW = { is_vassal = no }
             SEN = { is_vassal = no }
             CHO = { is_vassal = no }
@@ -855,7 +853,6 @@ country_event = {
         JAP = { all_core = { add_core = TKG } }
         SAT = { all_core = { add_core = TKG } }
         CHO = { all_core = { add_core = TKG } }
-		SOC = { all_core = { add_core = TKG } }
         SEN = { all_core = { add_core = TKG } }
         YZW = { all_core = { add_core = TKG } }
         TOS = { all_core = { add_core = TKG } }
@@ -1431,7 +1428,6 @@ country_event = {
                     tag = SAT
                     tag = TOS
                     tag = KAG
-					tag = SOC
                 }
                 exists = yes
             }
@@ -1782,7 +1778,6 @@ country_event = {
                     tag = SAT
                     tag = TOS
                     tag = KAG
-					tag = SOC
                 }
                 exists = yes
             }
@@ -1939,7 +1934,6 @@ country_event = {
             tag = YZW
             tag = CHO
             tag = TOS
-			tag = SOC
             tag = SAT
         }
         substate_of = TKG
@@ -3330,7 +3324,6 @@ country_event = {
             SEN = { is_vassal = no }
             CHO = { is_vassal = no }
             TOS = { is_vassal = no }
-			SOC = { is_vassal = no }
             SAT = { is_vassal = no }
         }
         NOT = { has_country_flag = emperor_meiji }
@@ -3355,7 +3348,6 @@ country_event = {
         set_country_flag = emperor_meiji
         remove_country_modifier = kobu_gattai
         TKG = { all_core = { add_core = JAP } }
-		SOC = { all_core = { add_core = JAP } }
         SAT = { all_core = { add_core = JAP } }
         CHO = { all_core = { add_core = JAP } }
         SEN = { all_core = { add_core = JAP } }

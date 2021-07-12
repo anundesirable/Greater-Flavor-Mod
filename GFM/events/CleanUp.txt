@@ -2876,16 +2876,7 @@ country_event = {
     major = yes
 
     trigger = {
-		OR = {
-			AND = {
-				tag = ENG
-				ai = no
-			}
-			AND = {
-				ENG = { ai = yes }
-				ai = no
-			}
-		}
+        ai = no
         NOT = { has_global_flag = isolation_setup }
     }
 

@@ -1,0 +1,49 @@
+country_event = {
+	id = 10777
+	title = "Aztec Pride"
+	desc = "Our nation has struggled during it's first years of independence, now that these problems have been solved, let's enjoy our fully grown nation!"
+	picture = "dominican_revolution2"
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MEX
+		has_country_flag = aztecpride
+	}
+
+	option = {
+		name = "Viva Mexico"
+			MEX = {
+				limit = { tag = MEX }
+				}
+				add_country_modifier = {
+					name = aztec_pride
+					duration = 5475
+				}
+	}
+}
+
+country_event ={
+	id = 10778
+	title = "Forced Education"
+	desc = "The policies are set. Our people needs to be smarter, otherwise, our enemies will outsmart us, again."
+	is_triggered_only = yes
+	picture = "la_trinitaria"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MEX
+		has_country_flag = forced_education
+	}
+
+	option = {
+		name = "Aa, Bb, Cc..."
+			MEX = {
+				limit = { tag = MEX }
+			}
+			add_country_modifier = {
+				name = forced_education
+				duration = 5475
+			}
+	}
+}

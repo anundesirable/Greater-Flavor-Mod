@@ -137,7 +137,6 @@ political_decisions = {
                             owned_by = THIS
                             owner = { in_sphere = THIS }
                             province_id = 2131
-							province_id = 2133
                         }
                     }
                 }
@@ -155,7 +154,6 @@ political_decisions = {
                             owned_by = THIS
                             owner = { in_sphere = THIS }
                             province_id = 2131
-							province_id = 2133
                             }
                         }
                     }

@@ -207,7 +207,6 @@ political_decisions = {
                 CHO = { is_substate = no }
                 KAG = { is_substate = no }
                 YZW = { is_substate = no }
-				SOC = { is_substate = no }
                 SEN = { is_substate = no }
             }
         }
@@ -371,7 +370,6 @@ political_decisions = {
                     KAG = { ai = no }
                     SEN = { ai = no }
                     YZW = { ai = no }
-					SOC = { ai = no }
                 }
             }
         }
@@ -982,7 +980,6 @@ political_decisions = {
             OR = {
                 SEN = { exists = yes }
                 YZW = { exists = yes }
-				SOC = { exists = yes }
                 CHO = { exists = yes }
                 SAT = { exists = yes }
                 TOS = { exists = yes }
@@ -1007,11 +1004,6 @@ political_decisions = {
                 is_sphere_leader_of = YZW
                 relation = { who = YZW value = 100 }
                 YZW = { exists = no }
-            }
-			OR = {
-                is_sphere_leader_of = SOC
-                relation = { who = SOC value = 100 }
-                SOC = { exists = no }
             }
             OR = {
                 is_sphere_leader_of = CHO
@@ -1055,12 +1047,6 @@ political_decisions = {
                         remove_core = YZW
                     }
             }
-			SOC = {
-                    all_core = {
-                           add_core = TKG
-                        remove_core = SOC
-                    }
-            }
             KAG = {
                     all_core = {
                            add_core = KAG
@@ -1079,14 +1065,6 @@ political_decisions = {
                         remove_core = SAT
                     }
             }
-			any_country = { 
-				limit = {
-					tag = RYU
-					vassal_of = SAT
-					is_vassal = yes
-				}
-				release_vassal = RYU
-			}
             KAG = {
                     all_core = {
                            add_core = TKG
@@ -1117,7 +1095,6 @@ political_decisions = {
                     OR = {
                         tag = SEN
                         tag = YZW
-						tag = SOC
                         tag = CHO
                         tag = SAT
                         tag = TOS
@@ -1172,7 +1149,6 @@ political_decisions = {
                     OR = {
                         tag = SEN
                         tag = YZW
-						tag = SOC
                         tag = CHO
                         tag = SAT
                         tag = TOS

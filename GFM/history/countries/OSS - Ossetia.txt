@@ -1,5 +1,5 @@
 capital = 1054
-primary_culture = ossetian
+primary_culture = persian
 religion = orthodox
 government = democracy
 plurality = 0.0

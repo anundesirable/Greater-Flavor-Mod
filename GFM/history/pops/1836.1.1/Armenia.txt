@@ -189,19 +189,19 @@
     aristocrats = {
         culture = armenian
         religion = coptic
-        size = 40
+        size = 300
     }
 
     clergymen = {
         culture = armenian
         religion = coptic
-        size = 50
+        size = 175
     }
 
     artisans = {
         culture = armenian
         religion = coptic
-        size = 200
+        size = 800
     }
 
     soldiers = {
@@ -213,31 +213,37 @@
     farmers = {
         culture = armenian
         religion = coptic
-        size = 2700
+        size = 14750
     }
 
     aristocrats = {
-        culture = azerbaijani
-        religion = shiite
+        culture = georgian
+        religion = orthodox
         size = 10
     }
 
     clergymen = {
-        culture = azerbaijani
-        religion = shiite
+        culture = georgian
+        religion = orthodox
         size = 15
     }
 
     soldiers = {
-        culture = azerbaijani
-        religion = shiite
+        culture = georgian
+        religion = orthodox
         size = 10
     }
 
     farmers = {
-        culture = azerbaijani
-        religion = shiite
-        size = 250
+        culture = georgian
+        religion = orthodox
+        size = 925
+    }
+
+    farmers = {
+        culture = greek
+        religion = orthodox
+        size = 325
     }
 
 }
@@ -245,19 +251,19 @@
     aristocrats = {
         culture = armenian
         religion = coptic
-        size = 40
+        size = 300
     }
 
     clergymen = {
         culture = armenian
         religion = coptic
-        size = 50
+        size = 175
     }
 
     artisans = {
         culture = armenian
         religion = coptic
-        size = 200
+        size = 800
     }
 
     soldiers = {
@@ -269,31 +275,37 @@
     farmers = {
         culture = armenian
         religion = coptic
-        size = 3000
+        size = 14750
     }
 
     aristocrats = {
-        culture = azerbaijani
-        religion = shiite
+        culture = georgian
+        religion = orthodox
         size = 10
     }
 
     clergymen = {
-        culture = azerbaijani
-        religion = shiite
+        culture = georgian
+        religion = orthodox
         size = 15
     }
 
     soldiers = {
-        culture = azerbaijani
-        religion = shiite
+        culture = georgian
+        religion = orthodox
         size = 10
     }
 
     farmers = {
-        culture = azerbaijani
-        religion = shiite
-        size = 300
+        culture = georgian
+        religion = orthodox
+        size = 925
+    }
+
+    farmers = {
+        culture = greek
+        religion = orthodox
+        size = 325
     }
 
 }

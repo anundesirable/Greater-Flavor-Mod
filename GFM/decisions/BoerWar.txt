@@ -292,10 +292,11 @@ political_decisions = {
 
         effect = {
             prestige = 10
-			random_owned = { limit = { province_id = 2088 } change_province_name = "Springbok" add_core = THIS }
-            random_owned = { limit = { province_id = 2558 } change_province_name = "De Aar" add_core = THIS }
-            random_owned = { limit = { province_id = 2093 } change_province_name = "Calvinia" add_core = THIS }
-            random_owned = { limit = { province_id = 2094 } change_province_name = "Kimberley" add_core = THIS }
+			
+			random_owned = { limit = { province_id = 2088 } change_province_name = "Springbok" add_core = SAF }
+            random_owned = { limit = { province_id = 2558 } change_province_name = "De Aar" add_core = SAF }
+            random_owned = { limit = { province_id = 2093 } change_province_name = "Calvinia" add_core = SAF }
+            random_owned = { limit = { province_id = 2094 } change_province_name = "Kimberley" add_core = SAF }
         }
 
         ai_will_do = {

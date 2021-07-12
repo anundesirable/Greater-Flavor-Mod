@@ -53,7 +53,7 @@
     clergymen = {
         culture = bedouin
         religion = sunni
-        size = 55
+        size = 75
     }
 
     artisans = {
@@ -71,11 +71,11 @@
     farmers = {
         culture = bedouin
         religion = sunni
-        size = 55075
+        size = 63075
     }
 
     slaves = {
-        culture = kanuri
+        culture = forest_bantu
         religion = animist
         size = 6500
     }
@@ -90,18 +90,6 @@
         culture = sephardic
         religion = jewish
         size = 1475
-    }
-	
-	clergymen = {
-        culture = copt
-        religion = coptic
-        size = 20
-    }
-	
-	farmers = {
-        culture = copt
-        religion = coptic
-        size = 8000
     }
 }
 #Gharyan (40000/10000 POPS)
@@ -167,7 +155,7 @@
     }
 
     slaves = {
-        culture = kanuri
+        culture = forest_bantu
         religion = animist
         size = 2000
     }
@@ -201,7 +189,7 @@
     farmers = {
         culture = maghrebi
         religion = sunni
-        size = 9125
+        size = 10125
     }
 
     aristocrats = {
@@ -213,7 +201,7 @@
     clergymen = {
         culture = bedouin
         religion = sunni
-        size = 45
+        size = 50
     }
 
     artisans = {
@@ -235,7 +223,7 @@
     }
 
     slaves = {
-        culture = kanuri
+        culture = forest_bantu
         religion = animist
         size = 5000
     }
@@ -250,18 +238,6 @@
         culture = sephardic
         religion = jewish
         size = 490
-    }
-	
-	clergymen = {
-        culture = copt
-        religion = coptic
-        size = 5
-    }
-	
-	farmers = {
-        culture = copt
-        religion = coptic
-        size = 1000
     }
 }
 #Sirt (100000/25000 POPS)
@@ -327,7 +303,7 @@
     }
 
     slaves = {
-        culture = kanuri
+        culture = forest_bantu
         religion = animist
         size = 4000
     }
@@ -387,7 +363,7 @@
     clergymen = {
         culture = bedouin
         religion = sunni
-        size = 70
+        size = 75
     }
 
     artisans = {
@@ -405,11 +381,11 @@
     farmers = {
         culture = bedouin
         religion = sunni
-        size = 8650
+        size = 9150
     }
 
     slaves = {
-        culture = kanuri
+        culture = forest_bantu
         religion = animist
         size = 6000
     }
@@ -424,18 +400,6 @@
         culture = sephardic
         religion = jewish
         size = 245
-    }
-	
-	clergymen = {
-        culture = copt
-        religion = coptic
-        size = 5
-    }
-	
-	farmers = {
-        culture = copt
-        religion = coptic
-        size = 500
     }
 }
 #Darnah (60000/15000 POPS)
@@ -501,7 +465,7 @@
     }
 
     slaves = {
-        culture = kanuri
+        culture = forest_bantu
         religion = animist
         size = 2000
     }
@@ -569,7 +533,7 @@
     }
 
     slaves = {
-        culture = kanuri
+        culture = forest_bantu
         religion = animist
         size = 3000
     }

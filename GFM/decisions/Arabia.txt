@@ -730,8 +730,10 @@ political_decisions = {
             revolution_n_counterrevolution = 1
             NOT = {
                 has_country_flag = claimed_the_persian_gulf
-                1165 = { is_core = THIS }
-                1162 = { is_core = THIS }
+                 owns = 1165
+                 owns = 1162
+                 1165 = { is_core = THIS }
+                 1162 = { is_core = THIS }
             }
         }
 

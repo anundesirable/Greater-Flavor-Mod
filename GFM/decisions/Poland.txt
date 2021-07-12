@@ -526,7 +526,7 @@ political_decisions = {
         potential = {
             tag = KRA
             is_subject = no
-            NOT = { exists = GLM }
+            not = { exists = GLM }
         }
 
         allow = {

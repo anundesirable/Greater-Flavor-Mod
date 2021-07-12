@@ -64,7 +64,7 @@ political_decisions = {
         potential = {
             tag = CSA
             war_with = USA
-            NOT = {
+            not = {
                 has_country_flag = haskingcotton
             }
         }
@@ -266,7 +266,7 @@ political_decisions = {
         picture = bixby_letter
         potential = {
             tag = USA
-            NOT = {
+            not = {
                 has_country_flag = bixby_letter_sent
             }
             war_with = CSA
@@ -412,11 +412,16 @@ political_decisions = {
             NOT = { truce_with = MEX }
             NOT = { war_policy = pacifism }
             NOT = { MEX = { any_owned_province = { country_units_in_province = USA } } }
-            OR = {
-                TEX = { in_sphere = THIS }
-                TEX = { exists = no }
-                invention = manifest_destiny
-                any_owned_province = { is_core = MEX }
+            NOT = {
+				exists = TEX
+			}
+			NOT = {
+				133 = {
+					owned_by = MEX
+				}
+			}
+            invention = manifest_destiny
+			any_owned_province = { is_core = MEX }
             }
             MEX = { is_vassal = no }
         }
@@ -1655,7 +1660,6 @@ political_decisions = {
             2623 = { empty = yes }
             2526 = { empty = yes }
 			2524 = { empty = yes }
-			3411 = { empty = yes }
             NOT = { has_global_flag = annexed_midway_island }
         }
 
@@ -1675,7 +1679,6 @@ political_decisions = {
             2623 = { secede_province = THIS any_pop = { literacy = -0.99 } }
             2526 = { secede_province = THIS any_pop = { literacy = -0.99 } }
 			2524 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-			3411 = { secede_province = THIS any_pop = { literacy = -0.99 } }
         }
 
         ai_will_do = { factor = 100 }
@@ -1837,6 +1840,27 @@ political_decisions = {
                 }
                 life_rating = 5
             }
+			3451 = { change_province_name = "Southern Mojave" } state_scope = { change_region_name = "Southern California" } #SC
+			88 = { change_province_name = "Northern Mojave" } #SC
+			3453 = { change_province_name = "Redding" } state_scope = { change_region_name = "Northern California" } } #NC
+			86 = { change_province_name = "Truckee" }
+			3454 = { change_province_name = "Klamath" } #NC
+			94 = { change_province_name = "Carson City" } #NV
+			95 = { change_province_name = "Elko" }
+			3458 = { change_province_name = "Shanty Town" } #NV
+			97 = { change_province_name = "Salt Lake City" } state_scope = { change_region_name = "Utah" } } #UT
+			98 = { change_province_name = "Cedar City" }
+			99 = { change_province_name = "Moab" }
+			3459 = { change_province_name = "Aragonite" } #UT
+			100 = { change_province_name = "Phoenix" } #AZ
+			101 = { change_province_name = "Flagstaff" } #AZ
+			110 = { change_province_name = "Rock Springs" } #WY
+			107 = { change_province_name = "Riverside" } #WY
+			103 = { state_scope = { change_region_name = "New Mexico" } } #NM
+			108 = { change_province_name = "Naturita" } #CL
+			109 = { change_province_name = "Buena Vista" } #CL
+			128 = { change_province_name = "Hugoton" } #KS
+			129 = { change_province_name = "Guymon" } #OK
             43 = { change_province_name = "Dallas" life_rating = 5 }
             134 = { change_province_name = "Abilene" }
             135 = { change_province_name = "Lubbock" }
