@@ -1,4 +1,4 @@
-Hi there dear reader!
+Hi there dear reader!!
 
 Making a changelog for GFM is no easy feat since so much content is added regularly and I myself haven't been around for the first few months of development, back when it was just Jman.
 When it was created, GFM was named HFMe or HFM Expanded, based on the Historical Flavor Mod by the legendary Sighpies. 
