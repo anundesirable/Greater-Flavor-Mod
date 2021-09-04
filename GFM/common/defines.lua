@@ -133,9 +133,9 @@ military = {
     REINFORCE_SPEED = 0.2,
     COMBAT_DIFFICULTY_IMPACT = 0.2,
     BASE_COMBAT_WIDTH = 30,
-    POP_MIN_SIZE_FOR_REGIMENT = 750,
-    POP_SIZE_PER_REGIMENT = 3000,
-    SOLDIER_TO_POP_DAMAGE = 0.15,
+	POP_MIN_SIZE_FOR_REGIMENT = 5000,
+	POP_SIZE_PER_REGIMENT = 5000,
+	SOLDIER_TO_POP_DAMAGE = 0.75,
     LAND_SPEED_MODIFIER = 1,
     NAVAL_SPEED_MODIFIER = 2,
     EXP_GAIN_DIV = 0.05,
@@ -625,9 +625,9 @@ pops = {
 
     ASSIMILATION_SCALE = 0.004,
     CONVERSION_SCALE = 0.01,
-    IMMIGRATION_SCALE = 0.004,
+	IMMIGRATION_SCALE = 0.008,
 
-    PROMOTION_SCALE = 0.002,
+	PROMOTION_SCALE = 0.004,
     PROMOTION_ASSIMILATION_CHANCE = 0,
     LUXURY_THRESHOLD = 500,
     BASE_GOODS_DEMAND = 0.75,
@@ -731,8 +731,8 @@ ai =
     AGGRESSION_UNCIV_BONUS = 10, -- additional AI civ aggression against uncivs
     FLEET_SIZE = 30, -- AI will attempt to keep fleets of roughly this size (fewer fleets generally results in more competent naval AI)
     MIN_FLEETS = 1, -- Minimum amount of main fleets the AI will divide its navy into (does not include specialized fleets such as blockades and naval invasions)
-    MAX_FLEETS = 20, -- Maximal amount of main fleets the AI will divide its navy into (does not include specialized fleets such as blockades and naval invasions)
-    MONTHS_BEFORE_DISBAND = 8, -- Months from start date before AI will disband armies/navies (to avoid disbands because of early economic turmoil)
+	MAX_FLEETS = 1, -- Maximal amount of main fleets the AI will divide its navy into (does not include specialized fleets such as blockades and naval invasions)
+	MONTHS_BEFORE_DISBAND = 12, -- Months from start date before AI will disband armies/navies (to avoid disbands because of early economic turmoil)
 },
 
 graphics =
