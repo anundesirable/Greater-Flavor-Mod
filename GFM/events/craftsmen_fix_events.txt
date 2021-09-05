@@ -11,13 +11,16 @@ country_event = {
         name = "USE THIS OPTION FIRST"
         any_owned = {
 			limit = {
-				is_core = THIS
+				owned_by = THIS
 			}
             any_pop = {
                 limit = {
                     is_primary_culture = no
                     is_accepted_culture = no
-                    type = craftsmen
+                    OR = {
+                        type = craftsmen
+                        type = bureaucrats
+                    }
                 }
                 pop_type = farmers
             }
@@ -38,7 +41,7 @@ country_event = {
         name = "USE THIS OPTION SECOND"
         any_owned = {
 			limit = {
-				is_core = THIS
+				owned_by = THIS
 			}
             any_pop = {
                 limit = {

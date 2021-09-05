@@ -41,6 +41,6 @@ clipper_transport = {
     #Naval Abilities
     hull = 1
     gun_power = 1
-    fire_range = 0.2
+	fire_range = 0.4
     evasion = 0
 }

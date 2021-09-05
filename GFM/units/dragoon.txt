@@ -13,11 +13,11 @@ dragoon = {
     floating_flag = yes
 
     #Core Abilities
-    priority = 5
-    max_strength = 3
+	priority = 35
+	max_strength = 5
     default_organisation = 30
     maximum_speed = 5.00
-    weighted_value = 6.0
+	weighted_value = 5.0
 
 
     #Building Costs
@@ -38,9 +38,9 @@ dragoon = {
 
 
     #Land Abilties
-    reconnaissance = 1
-    attack = 4
-    defence = 3
+	reconnaissance = 3
+	attack = 5
+	defence = 5
     discipline = 1.0
     support = 0.0
     maneuver = 3

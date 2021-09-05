@@ -9,11 +9,11 @@ tank = {
     primary_culture = yes
 
     #Core Abilities
-    priority = 5
-    max_strength = 3
+	priority = 50
+	max_strength = 5
     default_organisation = 40
     maximum_speed = 4.00
-    weighted_value = 12.0
+	weighted_value = 10.0
 
 
     #Building Costs
@@ -39,9 +39,9 @@ tank = {
 
     #Land Abilties
     reconnaissance = 0
-    attack = 16
-    defence = 8
-    discipline = 1
+	attack = 10
+	defence = 10
+	discipline = 1.0
     support = 0.0
     maneuver = 1
     siege = 1

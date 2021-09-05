@@ -10,11 +10,11 @@ irregular = {
     select_sound = army_selected
 
     #Core Abilities
-    priority = 2
-    max_strength = 3
+	priority = 5
+	max_strength = 5
     default_organisation = 20
     maximum_speed = 4.00
-    weighted_value = 1.0
+	weighted_value = 2.5
 
 
     #Building Costs

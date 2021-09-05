@@ -10,11 +10,11 @@ infantry = {
     select_sound = army_selected
 
     #Core Abilities
-    priority = 15
-    max_strength = 3
+	priority = 10
+	max_strength = 5
     default_organisation = 30
     maximum_speed = 4.00
-    weighted_value = 4.0
+	weighted_value = 5.0
 
 
     #Building Costs

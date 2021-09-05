@@ -43,9 +43,9 @@ commerce_raider = {
         coal = 0.25
     }
 
-    #Naval Abilities
-    hull = 6
-    gun_power = 4
+	#Naval Abilties
+	hull = 10
+	gun_power = 10
     fire_range = 0.6
     evasion = 0.25
     torpedo_attack = 0
