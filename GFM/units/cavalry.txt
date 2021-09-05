@@ -14,11 +14,11 @@ cavalry = {
     sprite_mount_attach_node = Saddle_Node
 
     #Core Abilities
-    priority = 4
-    max_strength = 3
+	priority = 25
+	max_strength = 5
     default_organisation = 20
     maximum_speed = 5.00
-    weighted_value = 2.0
+	weighted_value = 2.5
 
 
     #Building Costs
@@ -34,11 +34,11 @@ cavalry = {
 
 
     #Land Abilties
-    reconnaissance = 1
+	reconnaissance = 3
     attack = 3
-    defence = 1
+	defence = 3
     discipline = 1.0
     support = 0.0
-    maneuver = 2
+	maneuver = 3
 
 }
