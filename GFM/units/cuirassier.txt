@@ -14,11 +14,11 @@ cuirassier = {
 
 
     #Core Abilities
-    priority = 3
-    max_strength = 3
+	priority = 30
+	max_strength = 5
     default_organisation = 30
     maximum_speed = 5.00
-    weighted_value = 8.0
+	weighted_value = 5.0
 
 
     #Building Costs
@@ -40,9 +40,9 @@ cuirassier = {
 
 
     #Land Abilties
-    reconnaissance = 0
+	reconnaissance = 2
     attack = 6
-    defence = 4
+	defence = 6
     discipline = 1.0
     support = 0.0
     maneuver = 2
