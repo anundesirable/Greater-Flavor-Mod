@@ -91,9 +91,9 @@ party_issues = {
         planned_economy = {
             import_cost = 0.95
             min_tax = 0.5
-            factory_throughput = 0.5
+            factory_throughput = 0.1
             RGO_throughput = 0.5
-            factory_owner_cost = -1    #negative costs, can't build.
+            factory_owner_cost = -1 #negative costs, can't build.
 
             rules = {
                 build_factory = yes
@@ -145,6 +145,7 @@ party_issues = {
     war_policy = {
         jingoism = {
             max_military_spending = 1.0
+			min_military_spending = 0.5
             supply_consumption = 0.1
             war_exhaustion_effect = 0.5
             is_jingoism = yes
@@ -155,6 +156,7 @@ party_issues = {
         }
         pro_military = {
             max_military_spending = 1.0
+			min_military_spending = 0.25
             war_exhaustion_effect = 0.7
             cb_generation_speed_modifier = 0.2
             mobilization_impact = 3
@@ -178,6 +180,7 @@ party_issues = {
             mobilization_impact = 1
             org_regain = -0.5
             reinforce_speed = -0.5
+			badboy = -0.01
         }
     }
     social_policy = {
